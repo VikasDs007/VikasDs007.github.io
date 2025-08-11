@@ -29,6 +29,16 @@
             color: #38bdf8; /* sky-400 */
             margin-bottom: 3rem;
         }
+        .tag {
+            display: inline-block;
+            background-color: #1e293b; /* slate-800 */
+            color: #94a3b8; /* slate-400 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #334155; /* slate-700 */
+        }
     </style>
 </head>
 <body>
@@ -37,11 +47,17 @@
     <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-white">Vikas Chaurasia</a>
-            <div class="space-x-4 md:space-x-6 text-sm md:text-base">
-                <a href="#process" class="hover:text-sky-400 transition-colors">Process</a>
-                <a href="#use-cases" class="hover:text-sky-400 transition-colors">Use Cases</a>
-                <a href="https://www.fiverr.com/users/vikas_chaurasia/" target="_blank" class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-sky-400 transition-colors">
-                    View on Fiverr
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                <a href="Vikas_Resume.pdf" download class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-sky-400 transition-colors">
+                    Download Resume
+                </a>
+            </div>
+            <div class="md:hidden">
+                 <a href="Vikas_Resume.pdf" download class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-sky-400 transition-colors text-sm">
+                    Resume
                 </a>
             </div>
         </nav>
@@ -52,7 +68,7 @@
         <section class="min-h-screen flex items-center justify-center py-20 px-6">
             <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <!-- Left: Dashboard Mockup -->
-                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 order-2 md:order-1">
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="bg-slate-700/80 p-4 rounded-lg text-center">
                             <p class="text-sm font-semibold text-sky-300">Accuracy</p>
@@ -73,7 +89,7 @@
                     </div>
                 </div>
                 <!-- Right: Text Content -->
-                <div class="text-center md:text-left">
+                <div class="text-center md:text-left order-1 md:order-2">
                     <div class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md inline-block mb-4">
                         Starter - Prototype - Production
                     </div>
@@ -92,57 +108,105 @@
             </div>
         </section>
 
-        <!-- Section 2: Process -->
-        <section id="process" class="py-20 px-6 bg-slate-800/50">
-            <div class="container mx-auto text-center">
-                <h2 class="section-title">Clear Process, Usable Deliverables</h2>
-                <p class="section-subtitle">From raw data to a production-ready solution.</p>
-                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                    <!-- Step 1 -->
-                    <div class="bg-slate-800 p-8 rounded-lg border border-slate-700 text-center">
-                        <div class="mb-4 inline-block p-4 bg-slate-700 rounded-full">
-                            <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <!-- Section 2: About Me -->
+        <section id="about" class="py-20 px-6 bg-slate-800/50">
+            <div class="container mx-auto text-center max-w-3xl">
+                <h2 class="section-title">About Me</h2>
+                <p class="text-xl text-slate-300 leading-relaxed">
+                    Aspiring Data Scientist with an M.Sc. in Data Science & Business Analytics and 10 months of professional experience. I specialize in using Python, SQL, and machine learning to uncover hidden patterns, optimize marketing performance, and build data-driven solutions to complex business problems.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3: Projects -->
+        <section id="projects" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="text-center">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-subtitle">A selection of my recent work.</p>
+                </div>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white mb-3">Intelligent Real Estate Assistant</h3>
+                        <p class="text-slate-400 mb-4 flex-grow">A Streamlit web app leveraging AI and ML for real estate professionals, featuring property recommendations, client profiling, and predictive analytics.</p>
+                        <ul class="space-y-2 text-slate-300 mb-6">
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Implemented regression and clustering for personalized property suggestions.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Automated task tracking and client management with interactive dashboards.</span></li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">EDA with Visuals</h3>
-                        <p class="text-slate-400">Deep dive into your data to uncover patterns and potential issues.</p>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="bg-slate-800 p-8 rounded-lg border border-slate-700 text-center">
-                        <div class="mb-4 inline-block p-4 bg-slate-700 rounded-full">
-                            <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636L4.222 4.222m15.556 15.556L18.364 18.364M18.364 5.636L19.778 4.222m-15.556 15.556L5.636 18.364M12 12a3 3 0 100-6 3 3 0 000 6z"></path></svg>
+                    <!-- Project 2 -->
+                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col">
+                        <h3 class="text-2xl font-bold text-white mb-3">Customer Segmentation Dashboard</h3>
+                        <p class="text-slate-400 mb-4 flex-grow">An interactive dashboard to segment retail customers using RFM analysis and K-Means clustering to identify high-value segments.</p>
+                         <ul class="space-y-2 text-slate-300 mb-6">
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Applied unsupervised learning to categorize customers based on purchasing behavior.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Utilized Jupyter Notebook for data preprocessing, visualization, and segment generation.</span></li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="tag">Streamlit</span><span class="tag">K-Means Clustering</span><span class="tag">RFM Analysis</span><span class="tag">Scikit-learn</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Baseline ML + Metrics</h3>
-                        <p class="text-slate-400">Build a robust first model and evaluate it with clear metrics like Accuracy, MAE, or RMSE.</p>
                     </div>
-                    <!-- Step 3 -->
-                    <div class="bg-slate-800 p-8 rounded-lg border border-slate-700 text-center">
-                        <div class="mb-4 inline-block p-4 bg-slate-700 rounded-full">
-                           <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                     <!-- Project 3 -->
+                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col lg:col-span-2">
+                        <h3 class="text-2xl font-bold text-white mb-3">Medical Expenses Prediction</h3>
+                        <p class="text-slate-400 mb-4 flex-grow">Built a machine learning model using linear regression to estimate medical expenses from features such as age, gender, BMI, and smoking status.</p>
+                         <ul class="space-y-2 text-slate-300 mb-6">
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Conducted feature engineering, EDA, and model validation to optimize predictive accuracy.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Used statsmodels and visualization libraries to communicate findings.</span></li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="tag">Linear Regression</span><span class="tag">Statsmodels</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2">Dashboard + Docs</h3>
-                        <p class="text-slate-400">Deliver an interactive dashboard, clean code, and a README for a seamless handover.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Use Cases -->
-        <section id="use-cases" class="py-20 px-6">
-            <div class="container mx-auto text-center">
-                <h2 class="section-title">Business Outcomes I Support</h2>
-                <p class="section-subtitle">Tailored solutions for your specific business goals.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
-                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-center aspect-square flex flex-col justify-center">
-                        <h3 class="text-lg font-bold text-white">Churn Prediction</h3>
+        <!-- Section 4: Experience & Skills -->
+        <section id="experience" class="py-20 px-6 bg-slate-800/50">
+            <div class="container mx-auto">
+                <div class="text-center">
+                    <h2 class="section-title">Experience & Skills</h2>
+                    <p class="section-subtitle">My professional background and technical toolkit.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Experience -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Professional Experience</h3>
+                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold text-lg text-white">Analyst, Operations</h4>
+                                <p class="text-slate-400 text-sm">04/2022 - 06/2023</p>
+                            </div>
+                            <p class="text-sky-400 mb-3">BluBrick Realty | Mumbai</p>
+                            <ul class="list-disc list-inside space-y-2 text-slate-300">
+                                <li>Architected and managed the company's centralized client and property database in Excel.</li>
+                                <li>Performed trend analysis on sales data, leading to a 20% strategic shift in marketing fund allocation.</li>
+                                <li>Engineered an optimized master file that reduced agent time-to-match and accelerated the sales cycle.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-center aspect-square flex flex-col justify-center">
-                        <h3 class="text-lg font-bold text-white">Customer Segmentation</h3>
-                    </div>
-                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-center aspect-square flex flex-col justify-center">
-                        <h3 class="text-lg font-bold text-white">Forecasting & Demand Planning</h3>
-                    </div>
-                    <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-center aspect-square flex flex-col justify-center">
-                        <h3 class="text-lg font-bold text-white">Anomaly Detection & Quality Checks</h3>
+                    <!-- Skills -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Technical Skills</h3>
+                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                            <div class="flex flex-wrap gap-3">
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Data Visualization</span>
+                                <span class="tag">Regression Analysis</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Data Collection</span>
+                                <span class="tag">Microsoft Office</span>
+                                <span class="tag">Microsoft Excel</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,10 +214,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-8 px-6">
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 px-6">
         <div class="container mx-auto text-center text-slate-400">
-            <p class="mb-4">Ready to turn your data into decisions?</p>
-            <a href="https://www.fiverr.com/users/vikas_chaurasia/" target="_blank" class="bg-sky-500 text-slate-900 font-bold py-3 px-6 rounded-md hover:bg-sky-400 transition-colors inline-block mb-6">
+            <p class="text-2xl font-bold text-white mb-4">Ready to turn your data into decisions?</p>
+            <p class="mb-6 max-w-xl mx-auto">Contact me to discuss your project goals. I'm available for freelance work and new opportunities.</p>
+            <a href="https://www.fiverr.com/users/vikas_chaurasia/" target="_blank" class="bg-sky-500 text-slate-900 font-bold py-3 px-6 rounded-md hover:bg-sky-400 transition-colors inline-block mb-8">
                 Contact Me on Fiverr
             </a>
             <p class="text-sm">&copy; 2024 Vikas Chaurasia. All rights reserved.</p>
