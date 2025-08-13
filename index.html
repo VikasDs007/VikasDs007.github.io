@@ -1,229 +1,1051 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas Chaurasia | Data Science & ML Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Vikas Chaurasia - Data Scientist & ML Engineer specializing in Python, Machine Learning, and Advanced Analytics. MSc in Data Science.">
+    <meta name="keywords" content="Data Scientist, Machine Learning, Python, Analytics, Mumbai, India">
+    <meta name="author" content="Vikas Chaurasia">
+    <title>Vikas Chaurasia | Data Scientist & ML Engineer</title>
+    
+    <!-- Performance Optimized CDN Loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    
+    <!-- Optimized Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'neon': {
+                            'blue': '#00D4FF',
+                            'purple': '#8B5CF6',
+                            'green': '#00FF88',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
         body {
+            background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 50%, #16213E 100%);
             font-family: 'Inter', sans-serif;
-            background-color: #0F172A; /* slate-900 */
-            color: #cbd5e1; /* slate-300 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        .accent-glow {
-            color: #38bdf8; /* sky-400 */
-            text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
-        .section-title {
-            font-size: 2.25rem; /* text-4xl */
-            font-weight: 900; /* font-black */
-            color: #fff;
-            margin-bottom: 1rem;
+
+        .neon-border {
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
         }
-        .section-subtitle {
-            font-size: 1.25rem; /* text-xl */
-            color: #38bdf8; /* sky-400 */
-            margin-bottom: 3rem;
+
+        .code-bg {
+            background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
         }
-        .tag {
-            display: inline-block;
-            background-color: #1e293b; /* slate-800 */
-            color: #94a3b8; /* slate-400 */
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid #334155; /* slate-700 */
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .floating-3d {
+            animation: float3d 6s ease-in-out infinite;
+            will-change: transform;
+        }
+        
+        @keyframes float3d {
+            0%, 100% { 
+                transform: translateY(0px) rotateX(0deg) rotateY(0deg); 
+            }
+            25% { 
+                transform: translateY(-10px) rotateX(2deg) rotateY(1deg); 
+            }
+            50% { 
+                transform: translateY(-20px) rotateX(0deg) rotateY(-1deg); 
+            }
+            75% { 
+                transform: translateY(-10px) rotateX(-2deg) rotateY(1deg); 
+            }
+        }
+        
+        .card-3d {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover .card-inner {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        .card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .skill-card-3d {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card-3d:hover {
+            transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(20px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #00D4FF, #8B5CF6, #00FF88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tech-grid {
+            background-image:
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .floating-3d {
+                animation: none;
+            }
+            
+            .card-3d:hover .card-inner,
+            .skill-card-3d:hover {
+                transform: none;
+            }
+        }
+
+        /* Performance optimizations */
+        .card-3d, .skill-card-3d {
+            will-change: transform;
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .floating, .floating-3d {
+                animation: none;
+            }
+            
+            .card-3d:hover .card-inner,
+            .skill-card-3d:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
-<body>
 
-    <!-- Header / Navigation -->
-    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white">Vikas Chaurasia</a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
-                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
-                <a href="Vikas_Resume.pdf" download class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-sky-400 transition-colors">
-                    Download Resume
-                </a>
-            </div>
-            <div class="md:hidden">
-                 <a href="Vikas_Resume.pdf" download class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md hover:bg-sky-400 transition-colors text-sm">
-                    Resume
-                </a>
-            </div>
-        </nav>
-    </header>
+<body class="text-white overflow-x-hidden">
+    <!-- Particle.js Background -->
+    <div id="particles-js" class="fixed inset-0 z-[-1]"></div>
 
-    <main>
-        <!-- Section 1: Hero -->
-        <section class="min-h-screen flex items-center justify-center py-20 px-6">
-            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left: Dashboard Mockup -->
-                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 order-2 md:order-1">
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-slate-700/80 p-4 rounded-lg text-center">
-                            <p class="text-sm font-semibold text-sky-300">Accuracy</p>
-                            <p class="text-2xl font-bold text-white">94.7%</p>
-                        </div>
-                        <div class="bg-slate-700/80 p-4 rounded-lg text-center">
-                            <p class="text-sm font-semibold text-sky-300">MAE</p>
-                            <p class="text-2xl font-bold text-white">1.21</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-700/80 p-4 rounded-lg">
-                        <p class="text-sm font-semibold text-sky-300 mb-2">Performance</p>
-                        <div class="h-32 w-full flex items-end p-2">
-                            <svg class="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                <path d="M 0 30 C 10 10, 20 10, 30 20 S 50 40, 60 25 S 80 0, 90 15 S 100 20, 100 20" stroke="#38bdf8" fill="none" stroke-width="2"/>
-                            </svg>
-                        </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-neon-blue/20">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="font-mono text-neon-blue font-bold text-xl">
+                    &lt;vikas.dev/&gt;
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="hover:text-neon-blue transition-colors">About</a>
+                    <a href="#projects" class="hover:text-neon-blue transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-neon-blue transition-colors">Contact</a>
+                    <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
+                        class="hover:text-neon-green transition-colors">
+                        GitHub
+                    </a>
+                    <a href="Vikas_Resume.pdf" download
+                        class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-black font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all">
+                        Resume
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-neon-blue/20">
+                    <div class="flex flex-col space-y-4 p-6">
+                        <a href="#about" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">About</a>
+                        <a href="#projects" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">Projects</a>
+                        <a href="#contact" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">Contact</a>
+                        <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
+                            class="hover:text-neon-green transition-colors" onclick="closeMobileMenu()">
+                            GitHub
+                        </a>
+                        <a href="Vikas_Resume.pdf" download
+                            class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-black font-semibold text-center">
+                            Resume
+                        </a>
                     </div>
                 </div>
-                <!-- Right: Text Content -->
-                <div class="text-center md:text-left order-1 md:order-2">
-                    <div class="bg-sky-500 text-slate-900 font-bold py-2 px-4 rounded-md inline-block mb-4">
-                        Starter - Prototype - Production
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="tech-grid absolute inset-0 opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Text Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <div class="font-mono text-neon-green text-sm">
+                            $ whoami
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                            <span class="gradient-text">Vikas</span><br>
+                            <span class="text-white">Chaurasia</span>
+                        </h1>
+                        <div class="font-mono text-xl text-gray-300 typing">
+                            Data Scientist & ML Engineer
+                        </div>
                     </div>
-                    <h1 class="text-4xl lg:text-6xl font-black text-white leading-tight">
-                        Build data science solutions: ML models, analytics, dashboards
-                    </h1>
-                    <p class="mt-4 text-lg lg:text-xl accent-glow">
-                        EDA → baseline model → production-ready dashboard
+
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
+                        Transforming raw data into actionable insights using
+                        <span class="text-neon-blue font-semibold">Python</span>,
+                        <span class="text-neon-purple font-semibold">Machine Learning</span>, and
+                        <span class="text-neon-green font-semibold">Advanced Analytics</span>
                     </p>
-                    <ul class="mt-8 space-y-3 inline-block text-left text-lg">
-                        <li class="flex items-center"><svg class="w-6 h-6 text-sky-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Python, scikit-learn, SQL</li>
-                        <li class="flex items-center"><svg class="w-6 h-6 text-sky-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Power BI/Tableau/Streamlit</li>
-                        <li class="flex items-center"><svg class="w-6 h-6 text-sky-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Clear docs & handover</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 2: About Me -->
-        <section id="about" class="py-20 px-6 bg-slate-800/50">
-            <div class="container mx-auto text-center max-w-3xl">
-                <h2 class="section-title">About Me</h2>
-                <p class="text-xl text-slate-300 leading-relaxed">
-                    Aspiring Data Scientist with an M.Sc. in Data Science & Business Analytics and 10 months of professional experience. I specialize in using Python, SQL, and machine learning to uncover hidden patterns, optimize marketing performance, and build data-driven solutions to complex business problems.
-                </p>
-            </div>
-        </section>
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+                        <a href="#projects"
+                            class="bg-gradient-to-r from-neon-blue to-neon-purple px-6 md:px-8 py-3 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all text-center">
+                            View Projects
+                        </a>
+                        <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
+                            class="border border-neon-green/50 px-6 md:px-8 py-3 rounded-lg hover:bg-neon-green/10 transition-all text-center">
+                            GitHub
+                        </a>
+                        <a href="#contact"
+                            class="border border-neon-blue/50 px-6 md:px-8 py-3 rounded-lg hover:bg-neon-blue/10 transition-all text-center">
+                            Get In Touch
+                        </a>
+                    </div>
 
-        <!-- Section 3: Projects -->
-        <section id="projects" class="py-20 px-6">
-            <div class="container mx-auto">
-                <div class="text-center">
-                    <h2 class="section-title">My Projects</h2>
-                    <p class="section-subtitle">A selection of my recent work.</p>
-                </div>
-                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col">
-                        <h3 class="text-2xl font-bold text-white mb-3">Intelligent Real Estate Assistant</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">A Streamlit web app leveraging AI and ML for real estate professionals, featuring property recommendations, client profiling, and predictive analytics.</p>
-                        <ul class="space-y-2 text-slate-300 mb-6">
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Implemented regression and clustering for personalized property suggestions.</span></li>
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Automated task tracking and client management with interactive dashboards.</span></li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+                    <!-- Live Stats -->
+                    <div class="grid grid-cols-3 gap-3 md:gap-6 pt-8">
+                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
+                            <div class="text-xl md:text-2xl font-bold text-neon-blue counter" data-target="1">0</div>
+                            <div class="text-xs md:text-sm text-gray-400">MSc Degree</div>
+                            <div class="text-xs text-neon-blue mt-1 hidden md:block">Data Science</div>
+                        </div>
+                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
+                            <div class="text-xl md:text-2xl font-bold text-neon-purple counter" data-target="3">0</div>
+                            <div class="text-xs md:text-sm text-gray-400">ML Projects</div>
+                            <div class="text-xs text-neon-purple mt-1 hidden md:block">Production Ready</div>
+                        </div>
+                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
+                            <div class="text-xl md:text-2xl font-bold text-neon-green counter" data-target="50">0</div>
+                            <div class="text-xs md:text-sm text-gray-400">Efficiency Boost</div>
+                            <div class="text-xs text-neon-green mt-1 hidden md:block">Average Improvement</div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col">
-                        <h3 class="text-2xl font-bold text-white mb-3">Customer Segmentation Dashboard</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">An interactive dashboard to segment retail customers using RFM analysis and K-Means clustering to identify high-value segments.</p>
-                         <ul class="space-y-2 text-slate-300 mb-6">
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Applied unsupervised learning to categorize customers based on purchasing behavior.</span></li>
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Utilized Jupyter Notebook for data preprocessing, visualization, and segment generation.</span></li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                           <span class="tag">Streamlit</span><span class="tag">K-Means Clustering</span><span class="tag">RFM Analysis</span><span class="tag">Scikit-learn</span>
+                </div>
+
+                <!-- Right: Code Terminal -->
+                <div class="floating-3d card-3d">
+                    <div class="card-inner bg-black/40 rounded-lg neon-border p-6 font-mono text-sm">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <span class="text-gray-400 ml-4">terminal</span>
                         </div>
-                    </div>
-                     <!-- Project 3 -->
-                    <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 flex flex-col lg:col-span-2">
-                        <h3 class="text-2xl font-bold text-white mb-3">Medical Expenses Prediction</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">Built a machine learning model using linear regression to estimate medical expenses from features such as age, gender, BMI, and smoking status.</p>
-                         <ul class="space-y-2 text-slate-300 mb-6">
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Conducted feature engineering, EDA, and model validation to optimize predictive accuracy.</span></li>
-                            <li class="flex"><svg class="w-5 h-5 text-sky-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Used statsmodels and visualization libraries to communicate findings.</span></li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2">
-                           <span class="tag">Linear Regression</span><span class="tag">Statsmodels</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+                        <div class="space-y-2">
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import pandas as pd</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">from sklearn.ensemble import RandomForestRegressor</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model = RandomForestRegressor()</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model.fit(X_train, y_train)</span></div>
+                            <div class="text-neon-blue">Training completed ✓</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">accuracy = model.score(X_test, y_test)</span></div>
+                            <div class="text-neon-purple">Accuracy: 94.7%</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">deploy_model()</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Section 4: Experience & Skills -->
-        <section id="experience" class="py-20 px-6 bg-slate-800/50">
-            <div class="container mx-auto">
-                <div class="text-center">
-                    <h2 class="section-title">Experience & Skills</h2>
-                    <p class="section-subtitle">My professional background and technical toolkit.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">
+                    <span class="gradient-text">About Me</span>
+                </h2>
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        I'm a passionate Data Scientist with an MSc in Data Science & Business Analytics, combining
+                        academic rigor with real-world business experience. My journey began in operations analytics,
+                        where I discovered the transformative power of data-driven decision making.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        What sets me apart is my ability to bridge the gap between complex data science concepts and
+                        practical business solutions. I don't just build models—I create systems that solve real
+                        problems and drive measurable impact.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="text-neon-blue font-bold text-lg mb-2">🎯 Problem Solver</div>
+                            <p class="text-gray-400 text-sm">I approach every challenge with analytical thinking and creative solutions</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-neon-purple font-bold text-lg mb-2">📈 Business Focused</div>
+                            <p class="text-gray-400 text-sm">My solutions are designed to deliver tangible business value and ROI</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-neon-green font-bold text-lg mb-2">🚀 Innovation Driven</div>
+                            <p class="text-gray-400 text-sm">I stay current with latest ML techniques and industry best practices</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <!-- Experience -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Professional Experience</h3>
-                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                            <div class="flex justify-between items-center mb-1">
-                                <h4 class="font-bold text-lg text-white">Analyst, Operations</h4>
-                                <p class="text-slate-400 text-sm">04/2022 - 06/2023</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Interactive Skills Chart -->
+                <div class="card-3d skill-card-3d code-bg rounded-lg p-8 neon-border">
+                    <div class="card-inner">
+                        <h3 class="text-2xl font-bold mb-6 text-neon-blue">Tech Stack Proficiency</h3>
+                        <div class="relative h-80">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="space-y-6">
+                    <div class="code-bg rounded-lg p-6 neon-border">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Analyst, Operations</h4>
+                            <span class="text-neon-blue text-sm">2022-2023</span>
+                        </div>
+                        <p class="text-neon-purple mb-3">BluBrick Realty</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• Increased client handling capacity by 50%</li>
+                            <li>• Led 20% shift in marketing fund allocation</li>
+                            <li>• Optimized agent-client matching process</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-bg rounded-lg p-6 neon-border">
+                        <h4 class="text-xl font-bold text-white mb-3">Education</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-300">MSc Data Science & Business Analytics</span>
+                                <span class="text-neon-blue text-sm">2025</span>
                             </div>
-                            <p class="text-sky-400 mb-3">BluBrick Realty | Mumbai</p>
-                            <ul class="list-disc list-inside space-y-2 text-slate-300">
-                                <li>Architected and managed the company's centralized client and property database in Excel.</li>
-                                <li>Performed trend analysis on sales data, leading to a 20% strategic shift in marketing fund allocation.</li>
-                                <li>Engineered an optimized master file that reduced agent time-to-match and accelerated the sales cycle.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Skills -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-4">Technical Skills</h3>
-                        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                            <div class="flex flex-wrap gap-3">
-                                <span class="tag">Python</span>
-                                <span class="tag">SQL</span>
-                                <span class="tag">Machine Learning</span>
-                                <span class="tag">Data Analysis</span>
-                                <span class="tag">Data Visualization</span>
-                                <span class="tag">Regression Analysis</span>
-                                <span class="tag">AI</span>
-                                <span class="tag">Data Collection</span>
-                                <span class="tag">Microsoft Office</span>
-                                <span class="tag">Microsoft Excel</span>
+                            <div class="flex justify-between">
+                                <span class="text-gray-300">Bachelor of Commerce</span>
+                                <span class="text-neon-blue text-sm">2021</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    <span class="gradient-text">Featured Projects</span>
+                </h2>
+                <p class="text-xl text-gray-300">Real-world applications of data science and machine learning</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-blue/10 transition-all group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-black font-bold text-xl">🏠</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-neon-blue transition-colors">
+                            Real Estate AI Assistant
+                        </h3>
+                    </div>
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        Streamlit web app with ML-powered property recommendations, client profiling, and predictive
+                        analytics for real estate professionals.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Streamlit</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Scikit-learn</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-purple/10 transition-all group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-green rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-black font-bold text-xl">📊</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-neon-purple transition-colors">
+                            Customer Segmentation
+                        </h3>
+                    </div>
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        Interactive dashboard using RFM analysis and K-Means clustering to identify high-value customer
+                        segments for targeted marketing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">K-Means</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">RFM Analysis</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Streamlit</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-green/10 transition-all group">
+                    <div class="mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-black font-bold text-xl">🏥</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-neon-green transition-colors">
+                            Medical Cost Prediction
+                        </h3>
+                    </div>
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        Linear regression model to predict medical expenses based on demographic and health factors with
+                        comprehensive EDA and validation.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Regression</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Statsmodels</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Seaborn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">
+                <span class="gradient-text">Let's Build Something Amazing</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Ready to turn your data into actionable insights? Let's discuss your next data science project.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+                <div class="code-bg rounded-lg p-6 neon-border">
+                    <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-neon-blue text-xl">📧</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Email</h3>
+                    <p class="text-gray-300 text-xs break-all">vikasjchaurasia<br class="hidden md:block">@gmail.com</p>
+                </div>
+
+                <div class="code-bg rounded-lg p-6 neon-border">
+                    <div class="w-12 h-12 bg-neon-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-neon-purple text-xl">📱</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Phone</h3>
+                    <p class="text-gray-300 text-sm">+91 9987056798</p>
+                </div>
+
+                <div class="code-bg rounded-lg p-6 neon-border">
+                    <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-neon-green text-xl">📍</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Location</h3>
+                    <p class="text-gray-300 text-sm">Mumbai, India</p>
+                </div>
+
+                <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
+                    class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-green/10 transition-all group">
+                    <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-green/30 transition-all">
+                        <span class="text-neon-green text-xl">💻</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 group-hover:text-neon-green transition-colors">GitHub</h3>
+                    <p class="text-gray-300 text-sm">View Code</p>
+                </a>
+            </div>
+
+            <button onclick="toggleContactForm()"
+                class="bg-gradient-to-r from-neon-blue to-neon-purple px-8 py-4 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all inline-block">
+                Start a Project
+            </button>
+
+            <!-- Contact Form Modal -->
+            <div id="contactModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+                <div class="bg-slate-900 rounded-lg neon-border p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold gradient-text">Start a Project</h3>
+                        <button onclick="toggleContactForm()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                    </div>
+
+                    <form id="contactForm" class="space-y-6">
+                        <!-- Personal Information -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Full Name *</label>
+                                <input type="text" name="name" required
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Email *</label>
+                                <input type="email" name="email" required
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Phone</label>
+                                <input type="tel" name="phone"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Company</label>
+                                <input type="text" name="company"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                            </div>
+                        </div>
+
+                        <!-- Project Information -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Project Type *</label>
+                            <select name="project_type" required
+                                class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                                <option value="">Select project type</option>
+                                <option value="data-analysis">Data Analysis & Insights</option>
+                                <option value="ml-model">Machine Learning Model</option>
+                                <option value="dashboard">Dashboard & Visualization</option>
+                                <option value="automation">Data Automation</option>
+                                <option value="consulting">Data Strategy Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Budget Range</label>
+                                <select name="budget"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-10k">Under ₹10,000</option>
+                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
+                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                    <option value="50k-100k">₹50,000 - ₹1,00,000</option>
+                                    <option value="above-100k">Above ₹1,00,000</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Timeline</label>
+                                <select name="timeline"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP (Rush Job)</option>
+                                    <option value="1-2weeks">1-2 Weeks</option>
+                                    <option value="1month">1 Month</option>
+                                    <option value="2-3months">2-3 Months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Project Description -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Project Description *</label>
+                            <textarea name="project_description" required rows="4"
+                                placeholder="Describe your project goals, challenges, and expected outcomes..."
+                                class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors resize-vertical"></textarea>
+                        </div>
+
+                        <!-- Data Details -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Data Details</label>
+                            <textarea name="data_details" rows="3"
+                                placeholder="Tell me about your data: size, format, sources, any specific requirements..."
+                                class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors resize-vertical"></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit"
+                                class="flex-1 bg-gradient-to-r from-neon-blue to-neon-purple px-6 py-3 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all">
+                                Send Project Details
+                            </button>
+                            <button type="button" onclick="toggleContactForm()"
+                                class="px-6 py-3 border border-gray-600 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-12 px-6">
-        <div class="container mx-auto text-center text-slate-400">
-            <p class="text-2xl font-bold text-white mb-4">Ready to turn your data into decisions?</p>
-            <p class="mb-6 max-w-xl mx-auto">Contact me to discuss your project goals. I'm available for freelance work and new opportunities.</p>
-            <a href="https://www.fiverr.com/users/vikas_chaurasia/" target="_blank" class="bg-sky-500 text-slate-900 font-bold py-3 px-6 rounded-md hover:bg-sky-400 transition-colors inline-block mb-8">
-                Contact Me on Fiverr
-            </a>
-            <p class="text-sm">&copy; 2024 Vikas Chaurasia. All rights reserved.</p>
+    <footer class="py-8 px-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="font-mono text-neon-blue mb-4">&lt;/vikas.dev&gt;</div>
+            <p class="text-gray-400 text-sm">© 2024 Vikas Chaurasia. Crafted with data and code.</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.add('hidden');
+        }
+
+        function toggleContactForm() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                toggleContactForm();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('contactModal');
+                if (!modal.classList.contains('hidden')) {
+                    toggleContactForm();
+                }
+            }
+        });
+
+        // Optimized Particle.js Configuration
+        function initParticles() {
+            // Reduce particles on mobile for better performance
+            const isMobile = window.innerWidth < 768;
+            const particleCount = isMobile ? 40 : 80;
+            
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: particleCount,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: ['#00D4FF', '#8B5CF6', '#00FF88']
+                    },
+                    shape: {
+                        type: 'circle',
+                        stroke: {
+                            width: 0,
+                            color: '#000000'
+                        }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        anim: {
+                            enable: false,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 40,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00D4FF',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'repulse'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 400,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 40,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
+                        },
+                        remove: {
+                            particles_nb: 2
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        }
+
+        // EmailJS Configuration - Complete Setup
+        function initEmailJS() {
+            // Your actual EmailJS credentials
+            const PUBLIC_KEY = "hzRP2ZONWmPq53_KV";
+            const SERVICE_ID = "service_f8vr1hf";
+            const TEMPLATE_ID = "template_kpx0j3j";
+            
+            if (PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+                emailjs.init(PUBLIC_KEY);
+                return { SERVICE_ID, TEMPLATE_ID };
+            }
+            return null;
+        }
+
+        // Enhanced Contact Form Handler with Complete EmailJS Integration
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Get form field values
+            const inputs = form.querySelectorAll('input, select, textarea');
+            const templateParams = {};
+            
+            inputs.forEach(input => {
+                if (input.name) {
+                    templateParams[input.name] = input.value || 'Not provided';
+                }
+            });
+            
+            // Add additional structured data
+            templateParams.from_name = templateParams.name || 'Anonymous';
+            templateParams.from_email = templateParams.email || 'No email provided';
+            templateParams.message = templateParams.project_description || 'No description provided';
+            
+            // Try EmailJS first, fallback to mailto
+            const emailConfig = initEmailJS();
+            
+            if (emailConfig && typeof emailjs !== 'undefined' && emailjs.send) {
+                emailjs.send(emailConfig.SERVICE_ID, emailConfig.TEMPLATE_ID, templateParams)
+                    .then(function(response) {
+                        showNotification('Message sent successfully! I\'ll get back to you within 24 hours.', 'success');
+                        form.reset();
+                        toggleContactForm();
+                    })
+                    .catch(function(error) {
+                        console.log('EmailJS failed, falling back to mailto:', error);
+                        fallbackToMailto(templateParams);
+                    })
+                    .finally(function() {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
+            } else {
+                // Fallback to mailto
+                fallbackToMailto(templateParams);
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        }
+        
+        function fallbackToMailto(data) {
+            const subject = encodeURIComponent("Data Science Project Inquiry from " + data.from_name);
+            const body = encodeURIComponent(`
+New Project Inquiry:
+
+Name: ${data.from_name}
+Email: ${data.from_email}
+Phone: ${data.phone}
+Company: ${data.company}
+Project Type: ${data.project_type}
+Budget: ${data.budget}
+Timeline: ${data.timeline}
+
+Project Description:
+${data.message}
+
+Data Details:
+${data.data_details}
+            `);
+            
+            window.location.href = `mailto:vikasjchaurasia@gmail.com?subject=${subject}&body=${body}`;
+            showNotification('Email client opened! Please send the email to complete your inquiry.', 'info');
+            toggleContactForm();
+        }
+        
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 ${
+                type === 'success' ? 'bg-green-600' : 
+                type === 'error' ? 'bg-red-600' : 'bg-blue-600'
+            } text-white`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 5000);
+        }
+
+        // Skills Chart
+        function initSkillsChart() {
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Python', 'SQL', 'Machine Learning', 'Data Analysis', 'Visualization', 'Statistics'],
+                    datasets: [{
+                        label: 'Proficiency Level',
+                        data: [90, 85, 88, 92, 87, 83],
+                        backgroundColor: 'rgba(0, 212, 255, 0.2)',
+                        borderColor: '#00D4FF',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#00D4FF',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#00D4FF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: '#64748b',
+                                backdropColor: 'transparent'
+                            },
+                            grid: {
+                                color: 'rgba(100, 116, 139, 0.3)'
+                            },
+                            angleLines: {
+                                color: 'rgba(100, 116, 139, 0.3)'
+                            },
+                            pointLabels: {
+                                color: '#cbd5e1',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 50;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        setTimeout(updateCounter, 40);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu setup
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const menu = document.getElementById('mobileMenu');
+                const btn = document.getElementById('mobileMenuBtn');
+                if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Performance optimized initialization
+            initParticles();
+            
+            // Delay heavy operations for better initial load
+            setTimeout(() => {
+                initSkillsChart();
+                animateCounters();
+            }, 500);
+            
+            // Update form handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', handleContactForm);
+            }
+            
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all project cards and sections
+            document.querySelectorAll('.code-bg').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Optimized resize handler with debouncing
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Reinitialize particles with new screen size
+                if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
+                    window.pJSDom[0].pJS.canvas.resizeCanvas();
+                }
+                
+                // Close mobile menu on resize
+                closeMobileMenu();
+            }, 250);
+        });
+    </script>
 
 </body>
 </html>
