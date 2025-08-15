@@ -9,6 +9,34 @@
     <meta name="author" content="Vikas Chaurasia">
     <title>Vikas Chaurasia | Data Scientist & ML Engineer</title>
     
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="Vikas Chaurasia - Data Scientist & ML Engineer">
+    <meta property="og:description" content="Interactive portfolio showcasing data science projects with live demos. Specializing in Python, Machine Learning, and Advanced Analytics.">
+    <meta property="og:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
+    <meta property="og:url" content="https://vikasds007.github.io">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vikas Chaurasia - Data Scientist & ML Engineer">
+    <meta name="twitter:description" content="Interactive portfolio with live ML demos and data science projects">
+    <meta name="twitter:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
+    
+    <!-- PWA Features -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00D4FF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Vikas Portfolio">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5496575DR0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5496575DR0');
+    </script>
+    
     <!-- Performance Optimized CDN Loading -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -43,13 +71,23 @@
     </script>
     
     <style>
+        /* === CORE STYLES === */
         body {
             background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 50%, #16213E 100%);
             font-family: 'Inter', sans-serif;
         }
 
+        /* === NEON THEME SYSTEM === */
+        .gradient-text {
+            background: linear-gradient(45deg, #00D4FF, #8B5CF6, #00FF88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
         .glow-text {
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.4);
         }
 
         .neon-border {
@@ -61,6 +99,112 @@
             background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
         }
 
+        .tech-grid {
+            background-image:
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* === CONSISTENT BUTTON STYLES === */
+        .btn-primary {
+            background: linear-gradient(to right, #00D4FF, #8B5CF6);
+            color: #000;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00D4FF;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 212, 255, 0.5);
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .btn-tertiary {
+            background: transparent;
+            color: #00FF88;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 255, 136, 0.5);
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .btn-tertiary:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+        }
+
+        /* === CONSISTENT CARD STYLES === */
+        .card-interactive {
+            background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            transform: scale(1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-interactive:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .card-blue:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .card-purple:hover {
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .card-green:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+        }
+
+        /* === SKILL ITEMS === */
+        .skill-item {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .skill-item:hover {
+            transform: scale(1.02);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+
+        /* === ANIMATIONS === */
         .floating {
             animation: float 6s ease-in-out infinite;
             will-change: transform;
@@ -75,16 +219,6 @@
             }
         }
 
-        .typing::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
         .floating-3d {
             animation: float3d 6s ease-in-out infinite;
             will-change: transform;
@@ -104,7 +238,18 @@
                 transform: translateY(-10px) rotateX(-2deg) rotateY(1deg); 
             }
         }
-        
+
+        .typing::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* === 3D EFFECTS === */
         .card-3d {
             perspective: 1000px;
             transform-style: preserve-3d;
@@ -128,21 +273,7 @@
             transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(20px);
         }
 
-        .gradient-text {
-            background: linear-gradient(45deg, #00D4FF, #8B5CF6, #00FF88);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tech-grid {
-            background-image:
-                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-
-        /* Mobile Optimizations */
+        /* === MOBILE OPTIMIZATIONS === */
         @media (max-width: 768px) {
             .floating-3d {
                 animation: none;
@@ -152,21 +283,157 @@
             .skill-card-3d:hover {
                 transform: none;
             }
+
+            .btn-primary, .btn-secondary, .btn-tertiary {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
         }
 
-        /* Performance optimizations */
-        .card-3d, .skill-card-3d {
+        /* === PERFORMANCE OPTIMIZATIONS === */
+        .card-3d, .skill-card-3d, .card-interactive, .skill-item {
             will-change: transform;
         }
 
-        /* Reduce motion for users who prefer it */
+        /* === LOADING ANIMATIONS === */
+        .loading-dots::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loading-skeleton {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.1) 25%, rgba(139, 92, 246, 0.1) 50%, rgba(0, 212, 255, 0.1) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* === SCROLL PROGRESS INDICATOR === */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #00D4FF, #8B5CF6, #00FF88);
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        /* === BACK TO TOP BUTTON === */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* === SKILLS PROFICIENCY BARS === */
+        .skill-progress {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-progress .skill-name {
+            display: flex;
+            justify-content: between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .skill-progress .progress-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00D4FF, #8B5CF6);
+            border-radius: 4px;
+            width: 0%;
+            transition: width 2s ease;
+            position: relative;
+        }
+
+        .skill-progress .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .skill-progress .percentage {
+            font-size: 0.875rem;
+            color: #00D4FF;
+            font-weight: 600;
+        }
+
+        /* === ACCESSIBILITY === */
         @media (prefers-reduced-motion: reduce) {
-            .floating, .floating-3d {
+            .floating, .floating-3d, .loading-dots, .fade-in, .loading-skeleton, .progress-fill {
                 animation: none;
             }
             
             .card-3d:hover .card-inner,
-            .skill-card-3d:hover {
+            .skill-card-3d:hover,
+            .card-interactive:hover,
+            .skill-item:hover {
                 transform: none;
             }
         }
@@ -174,8 +441,18 @@
 </head>
 
 <body class="text-white overflow-x-hidden">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <!-- Particle.js Background -->
     <div id="particles-js" class="fixed inset-0 z-[-1]"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top btn-secondary">
+        <span class="font-mono">↑ Top</span>
+    </button>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-neon-blue/20">
@@ -188,6 +465,10 @@
                     <a href="#about" class="hover:text-neon-blue transition-colors">About</a>
                     <a href="#projects" class="hover:text-neon-blue transition-colors">Projects</a>
                     <a href="#contact" class="hover:text-neon-blue transition-colors">Contact</a>
+                    <a href="https://www.linkedin.com/in/vikasds007/" target="_blank"
+                        class="hover:text-neon-blue transition-colors">
+                        LinkedIn
+                    </a>
                     <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
                         class="hover:text-neon-green transition-colors">
                         GitHub
@@ -211,6 +492,10 @@
                         <a href="#about" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">About</a>
                         <a href="#projects" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">Projects</a>
                         <a href="#contact" class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">Contact</a>
+                        <a href="https://www.linkedin.com/in/vikasds007/" target="_blank"
+                            class="hover:text-neon-blue transition-colors" onclick="closeMobileMenu()">
+                            LinkedIn
+                        </a>
                         <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
                             class="hover:text-neon-green transition-colors" onclick="closeMobileMenu()">
                             GitHub
@@ -255,36 +540,46 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4">
-                        <a href="#projects"
-                            class="bg-gradient-to-r from-neon-blue to-neon-purple px-6 md:px-8 py-3 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all text-center">
+                        <a href="#projects" class="btn-primary text-center">
                             View Projects
                         </a>
-                        <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
-                            class="border border-neon-green/50 px-6 md:px-8 py-3 rounded-lg hover:bg-neon-green/10 transition-all text-center">
-                            GitHub
+                        <a href="https://www.linkedin.com/in/vikasds007/" target="_blank" class="btn-tertiary text-center">
+                            LinkedIn
                         </a>
-                        <a href="#contact"
-                            class="border border-neon-blue/50 px-6 md:px-8 py-3 rounded-lg hover:bg-neon-blue/10 transition-all text-center">
+                        <a href="#contact" class="btn-secondary text-center">
                             Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="flex justify-center gap-4 pt-4">
+                        <a href="https://www.linkedin.com/in/vikasds007/" target="_blank" 
+                           class="text-neon-blue hover:text-white transition-colors text-sm font-mono">
+                            💼 LinkedIn Profile
+                        </a>
+                        <span class="text-gray-600">•</span>
+                        <a href="https://github.com/VikasDs007?tab=repositories" target="_blank" 
+                           class="text-neon-green hover:text-white transition-colors text-sm font-mono">
+                            💻 GitHub Repos
                         </a>
                     </div>
 
                     <!-- Live Stats -->
                     <div class="grid grid-cols-3 gap-3 md:gap-6 pt-8">
-                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
-                            <div class="text-xl md:text-2xl font-bold text-neon-blue counter" data-target="1">0</div>
-                            <div class="text-xs md:text-sm text-gray-400">MSc Degree</div>
-                            <div class="text-xs text-neon-blue mt-1 hidden md:block">Data Science</div>
+                        <div class="text-center card-interactive card-blue p-2 md:p-4">
+                            <div class="text-lg md:text-xl font-bold text-neon-blue glow-text">M.Sc</div>
+                            <div class="text-xs md:text-sm text-gray-400">Data Science &</div>
+                            <div class="text-xs text-neon-blue mt-1">Business Analytics</div>
                         </div>
-                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
-                            <div class="text-xl md:text-2xl font-bold text-neon-purple counter" data-target="3">0</div>
-                            <div class="text-xs md:text-sm text-gray-400">ML Projects</div>
-                            <div class="text-xs text-neon-purple mt-1 hidden md:block">Production Ready</div>
+                        <div class="text-center card-interactive card-purple p-2 md:p-4">
+                            <div class="text-lg md:text-xl font-bold text-neon-purple glow-text">AI/ML</div>
+                            <div class="text-xs md:text-sm text-gray-400">Specialist</div>
+                            <div class="text-xs text-neon-purple mt-1">Expert</div>
                         </div>
-                        <div class="text-center code-bg rounded-lg p-2 md:p-4 neon-border">
-                            <div class="text-xl md:text-2xl font-bold text-neon-green counter" data-target="50">0</div>
-                            <div class="text-xs md:text-sm text-gray-400">Efficiency Boost</div>
-                            <div class="text-xs text-neon-green mt-1 hidden md:block">Average Improvement</div>
+                        <div class="text-center card-interactive card-green p-2 md:p-4">
+                            <div class="text-lg md:text-xl font-bold text-neon-green glow-text">Python</div>
+                            <div class="text-xs md:text-sm text-gray-400">Data Science</div>
+                            <div class="text-xs text-neon-green mt-1">Ecosystem</div>
                         </div>
                     </div>
                 </div>
@@ -350,12 +645,85 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Interactive Skills Chart -->
+                <!-- Skills Proficiency -->
                 <div class="card-3d skill-card-3d code-bg rounded-lg p-8 neon-border">
                     <div class="card-inner">
-                        <h3 class="text-2xl font-bold mb-6 text-neon-blue">Tech Stack Proficiency</h3>
-                        <div class="relative h-80">
-                            <canvas id="skillsChart"></canvas>
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">Technical Proficiency</h3>
+                        <div class="space-y-6">
+                            <!-- Programming Languages -->
+                            <div class="skill-category">
+                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// Programming Languages</h4>
+                                <div class="space-y-4">
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">Python</span>
+                                            <span class="percentage">95%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="95"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">SQL</span>
+                                            <span class="percentage">85%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- ML/AI Frameworks -->
+                            <div class="skill-category">
+                                <h4 class="text-neon-green font-semibold mb-4 font-mono">// ML/AI Frameworks</h4>
+                                <div class="space-y-4">
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">Scikit-learn</span>
+                                            <span class="percentage">90%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="90"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">TensorFlow</span>
+                                            <span class="percentage">75%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Data Tools -->
+                            <div class="skill-category">
+                                <h4 class="text-neon-purple font-semibold mb-4 font-mono">// Data Tools</h4>
+                                <div class="space-y-4">
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">Pandas</span>
+                                            <span class="percentage">92%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="92"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-name flex justify-between">
+                                            <span class="font-mono">Streamlit</span>
+                                            <span class="percentage">88%</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" data-width="88"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,7 +773,7 @@
 
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-blue/10 transition-all group">
+                <div class="card-interactive card-blue group">
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center mb-4">
                             <span class="text-black font-bold text-xl">🏠</span>
@@ -423,47 +791,69 @@
                         <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Scikit-learn</span>
                         <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Pandas</span>
                     </div>
+                    <div class="mt-auto flex gap-2">
+                        <a href="https://intelligentrealestateassistantgit-007.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
+                            <span class="font-mono">{'Live Demo'}</span>
+                        </a>
+                        <a href="https://github.com/VikasDs007/intelligent_real_estate_assistant" target="_blank" class="btn-secondary flex-1 text-center">
+                            <span class="font-mono">{'Code'}</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-purple/10 transition-all group">
+                <div class="card-interactive card-purple group">
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-green rounded-lg flex items-center justify-center mb-4">
-                            <span class="text-black font-bold text-xl">📊</span>
+                            <span class="text-black font-bold text-xl">🎬</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-purple transition-colors">
-                            Customer Segmentation
+                            Movie Recommendation System
                         </h3>
                     </div>
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Interactive dashboard using RFM analysis and K-Means clustering to identify high-value customer
-                        segments for targeted marketing.
+                        Content-based movie recommendation system using machine learning algorithms to suggest movies based on user preferences and movie features.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">K-Means</span>
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">RFM Analysis</span>
-                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Streamlit</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Content-Based</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">ML Algorithms</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Python</span>
+                    </div>
+                    <div class="mt-auto flex gap-2">
+                        <a href="https://content-base-movie-recommendation.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
+                            <span class="font-mono">{'Live Demo'}</span>
+                        </a>
+                        <a href="https://github.com/VikasDs007/Content-Base-Movie-Recommendation" target="_blank" class="btn-secondary flex-1 text-center">
+                            <span class="font-mono">{'Code'}</span>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-green/10 transition-all group">
+                <div class="card-interactive card-green group">
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-lg flex items-center justify-center mb-4">
-                            <span class="text-black font-bold text-xl">🏥</span>
+                            <span class="text-black font-bold text-xl">🛡️</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-green transition-colors">
-                            Medical Cost Prediction
+                            AI Insurance Predictor
                         </h3>
                     </div>
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Linear regression model to predict medical expenses based on demographic and health factors with
-                        comprehensive EDA and validation.
+                        AI-powered insurance cost prediction system using machine learning to estimate insurance premiums based on demographic and health factors.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Regression</span>
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Statsmodels</span>
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Seaborn</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">AI Prediction</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Machine Learning</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Streamlit</span>
+                    </div>
+                    <div class="mt-auto flex gap-2">
+                        <a href="https://ai-insurance-predictor.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
+                            <span class="font-mono">{'Live Demo'}</span>
+                        </a>
+                        <a href="https://github.com/VikasDs007/Medical-Expenses-Prediction" target="_blank" class="btn-secondary flex-1 text-center">
+                            <span class="font-mono">{'Code'}</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -480,8 +870,8 @@
                 Ready to turn your data into actionable insights? Let's discuss your next data science project.
             </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
-                <div class="code-bg rounded-lg p-6 neon-border">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-12">
+                <div class="card-interactive card-blue">
                     <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <span class="text-neon-blue text-xl">📧</span>
                     </div>
@@ -489,7 +879,7 @@
                     <p class="text-gray-300 text-xs break-all">vikasjchaurasia<br class="hidden md:block">@gmail.com</p>
                 </div>
 
-                <div class="code-bg rounded-lg p-6 neon-border">
+                <div class="card-interactive card-purple">
                     <div class="w-12 h-12 bg-neon-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <span class="text-neon-purple text-xl">📱</span>
                     </div>
@@ -497,7 +887,7 @@
                     <p class="text-gray-300 text-sm">+91 9987056798</p>
                 </div>
 
-                <div class="code-bg rounded-lg p-6 neon-border">
+                <div class="card-interactive card-green">
                     <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                         <span class="text-neon-green text-xl">📍</span>
                     </div>
@@ -505,8 +895,15 @@
                     <p class="text-gray-300 text-sm">Mumbai, India</p>
                 </div>
 
-                <a href="https://github.com/VikasDs007?tab=repositories" target="_blank"
-                    class="code-bg rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-green/10 transition-all group">
+                <a href="https://www.linkedin.com/in/vikasds007/" target="_blank" class="card-interactive card-blue group">
+                    <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-blue/30 transition-all">
+                        <span class="text-neon-blue text-xl">💼</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 group-hover:text-neon-blue transition-colors">LinkedIn</h3>
+                    <p class="text-gray-300 text-sm">Connect</p>
+                </a>
+
+                <a href="https://github.com/VikasDs007?tab=repositories" target="_blank" class="card-interactive card-green group">
                     <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-green/30 transition-all">
                         <span class="text-neon-green text-xl">💻</span>
                     </div>
@@ -515,8 +912,7 @@
                 </a>
             </div>
 
-            <button onclick="toggleContactForm()"
-                class="bg-gradient-to-r from-neon-blue to-neon-purple px-8 py-4 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all inline-block">
+            <button onclick="toggleContactForm()" class="btn-primary">
                 Start a Project
             </button>
 
@@ -524,8 +920,8 @@
             <div id="contactModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
                 <div class="bg-slate-900 rounded-lg neon-border p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold gradient-text">Start a Project</h3>
-                        <button onclick="toggleContactForm()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+                        <h3 class="text-2xl font-bold gradient-text glow-text">Start a Project</h3>
+                        <button onclick="toggleContactForm()" class="text-gray-400 hover:text-neon-blue text-2xl transition-colors">&times;</button>
                     </div>
 
                     <form id="contactForm" class="space-y-6">
@@ -615,12 +1011,10 @@
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <button type="submit"
-                                class="flex-1 bg-gradient-to-r from-neon-blue to-neon-purple px-6 py-3 rounded-lg font-semibold text-black hover:shadow-lg hover:shadow-neon-blue/25 transition-all">
+                            <button type="submit" class="btn-primary flex-1">
                                 Send Project Details
                             </button>
-                            <button type="button" onclick="toggleContactForm()"
-                                class="px-6 py-3 border border-gray-600 rounded-lg text-gray-300 hover:bg-gray-800 transition-colors">
+                            <button type="button" onclick="toggleContactForm()" class="btn-secondary">
                                 Cancel
                             </button>
                         </div>
@@ -898,80 +1292,148 @@ ${data.data_details}
             }, 5000);
         }
 
-        // Skills Chart
-        function initSkillsChart() {
-            const ctx = document.getElementById('skillsChart').getContext('2d');
+        // Enhanced Data Science Skills Animation
+        function initSkillsAnimation() {
+            const skillItems = document.querySelectorAll('.skill-item');
             
-            new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['Python', 'SQL', 'Machine Learning', 'Data Analysis', 'Visualization', 'Statistics'],
-                    datasets: [{
-                        label: 'Proficiency Level',
-                        data: [90, 85, 88, 92, 87, 83],
-                        backgroundColor: 'rgba(0, 212, 255, 0.2)',
-                        borderColor: '#00D4FF',
-                        borderWidth: 2,
-                        pointBackgroundColor: '#00D4FF',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: '#00D4FF'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        r: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: {
-                                color: '#64748b',
-                                backdropColor: 'transparent'
-                            },
-                            grid: {
-                                color: 'rgba(100, 116, 139, 0.3)'
-                            },
-                            angleLines: {
-                                color: 'rgba(100, 116, 139, 0.3)'
-                            },
-                            pointLabels: {
-                                color: '#cbd5e1',
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        }
-                    }
-                }
+            skillItems.forEach((item, index) => {
+                // Add staggered animation
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    item.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+                
+                // Add hover glow effect
+                item.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 0 20px rgba(0, 212, 255, 0.3)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'none';
+                });
             });
         }
 
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
+        // Enhanced Data Science Stats Animation
+        function animateDataScienceStats() {
+            const statCards = document.querySelectorAll('.code-bg');
             
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const increment = target / 50;
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.ceil(current);
-                        setTimeout(updateCounter, 40);
-                    } else {
-                        counter.textContent = target;
+            statCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px) scale(0.9)';
+                    card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0) scale(1)';
+                    }, 200);
+                }, index * 150);
+            });
+        }
+
+        // Scroll Progress Indicator
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                progressBar.style.width = scrollPercent + '%';
+            }
+        }
+
+        // Back to Top Button
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+                updateScrollProgress();
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Skills Progress Animation
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.progress-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.getAttribute('data-width');
+                        setTimeout(() => {
+                            entry.target.style.width = width + '%';
+                        }, 200);
                     }
-                };
-                
-                updateCounter();
+                });
+            }, { threshold: 0.5 });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Loading Animation for Elements
+        function initLoadingAnimations() {
+            const elements = document.querySelectorAll('.card-interactive, .project-card');
+            elements.forEach((el, index) => {
+                el.classList.add('fade-in');
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+        }
+
+        // Google Analytics Event Tracking
+        function trackEvent(action, category, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    event_category: category,
+                    event_label: label
+                });
+            }
+        }
+
+        // Track Portfolio Interactions
+        function initAnalyticsTracking() {
+            // Track project demo clicks
+            document.querySelectorAll('a[href*="streamlit.app"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('click', 'project_demo', link.href);
+                });
+            });
+
+            // Track GitHub clicks
+            document.querySelectorAll('a[href*="github.com"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('click', 'github_code', link.href);
+                });
+            });
+
+            // Track LinkedIn clicks
+            document.querySelectorAll('a[href*="linkedin.com"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('click', 'linkedin_profile', link.href);
+                });
+            });
+
+            // Track resume downloads
+            document.querySelectorAll('a[download]').forEach(link => {
+                link.addEventListener('click', () => {
+                    trackEvent('download', 'resume', 'vikas_resume.pdf');
+                });
             });
         }
 
@@ -992,13 +1454,18 @@ ${data.data_details}
                 }
             });
             
+            // Initialize new features
+            initBackToTop();
+            initLoadingAnimations();
+            initAnalyticsTracking();
+            
             // Performance optimized initialization
             initParticles();
             
             // Delay heavy operations for better initial load
             setTimeout(() => {
-                initSkillsChart();
-                animateCounters();
+                animateSkillBars();
+                animateDataScienceStats();
             }, 500);
             
             // Update form handler

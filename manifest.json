@@ -1,0 +1,25 @@
+{
+  "name": "Vikas Chaurasia - Data Scientist Portfolio",
+  "short_name": "Vikas Portfolio",
+  "description": "Interactive portfolio showcasing data science projects with live demos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F0F23",
+  "theme_color": "#00D4FF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxwYXRoIGQ9Ik05NiA0OEM3My45MDg2IDQ4IDU2IDY1LjkwODYgNTYgODhWMTA0QzU2IDEyNi4wOTEgNzMuOTA4NiAxNDQgOTYgMTQ0QzExOC4wOTEgMTQ0IDEzNiAxMjYuMDkxIDEzNiAxMDRWODhDMTM2IDY1LjkwODYgMTE4LjA5MSA0OCA5NiA0OFoiIGZpbGw9IiMwMEQ0RkYiLz4KPHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSI3NiIgeT0iNzYiPgo8cGF0aCBkPSJNMjAgNEMxMC4wNTg5IDQgMiAxMi4wNTg5IDIgMjJDMiAzMS45NDExIDEwLjA1ODkgNDAgMjAgNDBDMjkuOTQxMSA0MCAzOCAzMS45NDExIDM4IDIyQzM4IDEyLjA1ODkgMjkuOTQxMSA0IDIwIDRaIiBmaWxsPSIjOEI1Q0Y2Ii8+CjwvZGVmcz4KPC9zdmc+",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxwYXRoIGQ9Ik0yNTYgMTI4QzE5Ny42NDcgMTI4IDE1MiAxNzMuNjQ3IDE1MiAyMzJWMjgwQzE1MiAzMzguMzUzIDE5Ny42NDcgMzg0IDI1NiAzODRDMzE0LjM1MyAzODQgMzYwIDMzOC4zNTMgMzYwIDI4MFYyMzJDMzYwIDE3My42NDcgMzE0LjM1MyAxMjggMjU2IDEyOFoiIGZpbGw9IiMwMEQ0RkYiLz4KPHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMjA2IiB5PSIyMDYiPgo8cGF0aCBkPSJNNTAgMTBDMjcuOTA4NiAxMCAxMCAyNy45MDg2IDEwIDUwQzEwIDcyLjA5MTQgMjcuOTA4NiA5MCA1MCA5MEM3Mi4wOTE0IDkwIDkwIDcyLjA5MTQgOTAgNTBDOTAgMjcuOTA4NiA3Mi4wOTE0IDEwIDUwIDEwWiIgZmlsbD0iIzhCNUNGNiIvPgo8L2RlZnM+Cjwvc3ZnPg==",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["portfolio", "data-science", "professional"],
+  "lang": "en",
+  "dir": "ltr"
+}
