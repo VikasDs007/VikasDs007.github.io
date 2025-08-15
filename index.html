@@ -371,62 +371,158 @@
             transform: translateY(-5px) scale(1.1);
         }
 
-        /* === SKILLS PROFICIENCY BARS === */
-        .skill-progress {
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-progress .skill-name {
+        /* === ENHANCED SKILL BADGES === */
+        .skill-badge {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
             display: flex;
-            justify-content: between;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+        }
+
+
+
+        .skill-icon {
+            font-size: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 0.5rem;
+        }
+
+        .skill-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .skill-name {
             color: #fff;
-        }
-
-        .skill-progress .progress-track {
-            width: 100%;
-            height: 8px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #00D4FF, #8B5CF6);
-            border-radius: 4px;
-            width: 0%;
-            transition: width 2s ease;
-            position: relative;
-        }
-
-        .skill-progress .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .skill-progress .percentage {
-            font-size: 0.875rem;
-            color: #00D4FF;
             font-weight: 600;
+        }
+
+
+
+        /* === TECH LOGOS === */
+        .tech-logo {
+            width: 1.5rem;
+            height: 1.5rem;
+            filter: brightness(1.2);
+            transition: all 0.3s ease;
+            margin-left: auto;
+        }
+
+        .skill-badge:hover .tech-logo {
+            transform: scale(1.1);
+            filter: brightness(1.4) drop-shadow(0 0 8px rgba(0, 212, 255, 0.4));
+        }
+
+        /* === ADVANCED ANIMATIONS === */
+        .project-card-enter {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            animation: projectEnter 0.8s ease forwards;
+        }
+
+        @keyframes projectEnter {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .demo-preview {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: demoSlideIn 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes demoSlideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            }
+        }
+
+        .tech-badge-float {
+            animation: techFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes techFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-5px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+        }
+
+        /* === SCROLL TRIGGERED ANIMATIONS === */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+
+        /* === INTERACTIVE PARTICLE EFFECTS === */
+        .particle-trail {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFade 1s ease-out forwards;
+        }
+
+        @keyframes particleFade {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
         }
 
         /* === ACCESSIBILITY === */
         @media (prefers-reduced-motion: reduce) {
-            .floating, .floating-3d, .loading-dots, .fade-in, .loading-skeleton, .progress-fill {
+            .floating, .floating-3d, .loading-dots, .fade-in, .loading-skeleton, .progress-fill,
+            .project-card-enter, .demo-preview, .pulse-glow, .tech-badge-float {
                 animation: none;
             }
             
@@ -474,7 +570,7 @@
                         GitHub
                     </a>
                     <a href="Vikas_Resume.pdf" download
-                        class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-black font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all">
+                        class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all border border-neon-blue/30">
                         Resume
                     </a>
                 </div>
@@ -501,7 +597,7 @@
                             GitHub
                         </a>
                         <a href="Vikas_Resume.pdf" download
-                            class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-black font-semibold text-center">
+                            class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold text-center border border-neon-blue/30">
                             Resume
                         </a>
                     </div>
@@ -616,60 +712,124 @@
                 <h2 class="text-4xl font-bold mb-6">
                     <span class="gradient-text">About Me</span>
                 </h2>
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <p class="text-xl text-gray-300 leading-relaxed">
-                        I'm a passionate Data Scientist with an MSc in Data Science & Business Analytics, combining
-                        academic rigor with real-world business experience. My journey began in operations analytics,
-                        where I discovered the transformative power of data-driven decision making.
-                    </p>
-                    <p class="text-lg text-gray-400 leading-relaxed">
-                        What sets me apart is my ability to bridge the gap between complex data science concepts and
-                        practical business solutions. I don't just build models—I create systems that solve real
-                        problems and drive measurable impact.
-                    </p>
-                    <div class="grid md:grid-cols-3 gap-6 mt-8">
-                        <div class="text-center">
-                            <div class="text-neon-blue font-bold text-lg mb-2">🎯 Problem Solver</div>
-                            <p class="text-gray-400 text-sm">I approach every challenge with analytical thinking and creative solutions</p>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Main Story -->
+                    <div class="space-y-6">
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            From <span class="text-neon-blue font-semibold">Analyst, Operations</span> to <span class="text-neon-purple font-semibold">Data Scientist & ML Engineer</span> — 
+                            my journey is fueled by an obsession with turning messy data into game-changing insights.
+                        </p>
+                        <p class="text-lg text-gray-400 leading-relaxed">
+                            Armed with an <span class="text-neon-green font-semibold">MSc in Data Science & Business Analytics</span>, 
+                            I don't just crunch numbers — I architect intelligent solutions that make businesses smarter, 
+                            faster, and more profitable. Every dataset tells a story; I'm here to decode it.
+                        </p>
+                    </div>
+
+                    <!-- Impact Stats -->
+                    <div class="grid md:grid-cols-3 gap-6 py-8">
+                        <div class="text-center card-interactive p-6">
+                            <div class="text-3xl font-bold text-neon-blue mb-2">50%</div>
+                            <div class="text-sm text-gray-400">Client Capacity Increase</div>
+                            <div class="text-xs text-neon-blue mt-1">Operations Optimization</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-neon-purple font-bold text-lg mb-2">📈 Business Focused</div>
-                            <p class="text-gray-400 text-sm">My solutions are designed to deliver tangible business value and ROI</p>
+                        <div class="text-center card-interactive p-6">
+                            <div class="text-3xl font-bold text-neon-purple mb-2">20%</div>
+                            <div class="text-sm text-gray-400">Marketing Fund Reallocation</div>
+                            <div class="text-xs text-neon-purple mt-1">Data-Driven Strategy</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-neon-green font-bold text-lg mb-2">🚀 Innovation Driven</div>
-                            <p class="text-gray-400 text-sm">I stay current with latest ML techniques and industry best practices</p>
+                        <div class="text-center card-interactive p-6">
+                            <div class="text-3xl font-bold text-neon-green mb-2">94.7%</div>
+                            <div class="text-sm text-gray-400">Model Accuracy</div>
+                            <div class="text-xs text-neon-green mt-1">ML Performance</div>
+                        </div>
+                    </div>
+
+                    <!-- What I Do -->
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-neon-blue font-mono">// What I Build</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-green">▶</span>
+                                    <span>Predictive models that forecast business outcomes</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-blue">▶</span>
+                                    <span>Interactive dashboards for real-time insights</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-purple">▶</span>
+                                    <span>Automated ML pipelines for scalable solutions</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-green">▶</span>
+                                    <span>Data-driven strategies that drive ROI</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-neon-purple font-mono">// My Approach</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-blue">🧠</span>
+                                    <span>Think like a business owner, code like an engineer</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-green">⚡</span>
+                                    <span>Rapid prototyping with production-ready mindset</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-purple">📊</span>
+                                    <span>Data storytelling that drives decision-making</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-neon-blue">🚀</span>
+                                    <span>Continuous learning and adaptation</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center pt-8">
+                        <p class="text-lg text-gray-400 mb-6">
+                            Ready to turn your data into your competitive advantage?
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#projects" class="btn-primary">
+                                See My Work
+                            </a>
+                            <a href="#contact" class="btn-secondary">
+                                Let's Collaborate
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Skills Proficiency -->
+                <!-- Technical Skills -->
                 <div class="card-3d skill-card-3d code-bg rounded-lg p-8 neon-border">
                     <div class="card-inner">
-                        <h3 class="text-2xl font-bold mb-6 gradient-text">Technical Proficiency</h3>
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">Technical Arsenal</h3>
                         <div class="space-y-6">
-                            <!-- Programming Languages -->
+                            <!-- Core Technologies -->
                             <div class="skill-category">
-                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// Programming Languages</h4>
-                                <div class="space-y-4">
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">Python</span>
-                                            <span class="percentage">95%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="95"></div>
+                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// Core Technologies</h4>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🐍</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">Python</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo">
                                         </div>
                                     </div>
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">SQL</span>
-                                            <span class="percentage">85%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="85"></div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🗃️</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">SQL</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
@@ -678,23 +838,19 @@
                             <!-- ML/AI Frameworks -->
                             <div class="skill-category">
                                 <h4 class="text-neon-green font-semibold mb-4 font-mono">// ML/AI Frameworks</h4>
-                                <div class="space-y-4">
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">Scikit-learn</span>
-                                            <span class="percentage">90%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="90"></div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🤖</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">Scikit-learn</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" class="tech-logo">
                                         </div>
                                     </div>
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">TensorFlow</span>
-                                            <span class="percentage">75%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="75"></div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🧠</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">TensorFlow</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
@@ -703,23 +859,19 @@
                             <!-- Data Tools -->
                             <div class="skill-category">
                                 <h4 class="text-neon-purple font-semibold mb-4 font-mono">// Data Tools</h4>
-                                <div class="space-y-4">
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">Pandas</span>
-                                            <span class="percentage">92%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="92"></div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🐼</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">Pandas</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-logo">
                                         </div>
                                     </div>
-                                    <div class="skill-progress">
-                                        <div class="skill-name flex justify-between">
-                                            <span class="font-mono">Streamlit</span>
-                                            <span class="percentage">88%</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <div class="progress-fill" data-width="88"></div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🚀</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono">Streamlit</span>
+                                            <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
@@ -769,31 +921,65 @@
                     <span class="gradient-text">Featured Projects</span>
                 </h2>
                 <p class="text-xl text-gray-300">Real-world applications of data science and machine learning</p>
+                
+                <!-- Interactive Demo Stats -->
+                <div class="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
+                    <div class="card-interactive p-4">
+                        <div class="text-2xl font-bold text-neon-blue mb-2">3</div>
+                        <div class="text-sm text-gray-400">Live Demos</div>
+                        <div class="text-xs text-neon-blue mt-1">Interactive Apps</div>
+                    </div>
+                    <div class="card-interactive p-4">
+                        <div class="text-2xl font-bold text-neon-purple mb-2">94.7%</div>
+                        <div class="text-sm text-gray-400">Model Accuracy</div>
+                        <div class="text-xs text-neon-purple mt-1">ML Performance</div>
+                    </div>
+                    <div class="card-interactive p-4">
+                        <div class="text-2xl font-bold text-neon-green mb-2">Real-time</div>
+                        <div class="text-sm text-gray-400">Predictions</div>
+                        <div class="text-xs text-neon-green mt-1">Live Processing</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8">
+            <div class="grid lg:grid-cols-3 gap-8" id="projects-grid">
                 <!-- Project 1 -->
-                <div class="card-interactive card-blue group">
+                <div class="card-interactive card-blue group relative overflow-hidden">
+                    <!-- Interactive Preview -->
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-neon-blue/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
                     <div class="mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <span class="text-black font-bold text-xl">🏠</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-blue transition-colors">
                             Real Estate AI Assistant
                         </h3>
+                        <div class="text-xs text-neon-blue font-mono mt-1">🟢 Live & Interactive</div>
                     </div>
+                    
+                    <!-- Mini Demo Preview -->
+                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
+                        <div class="text-neon-green mb-1">$ predict_property_value()</div>
+                        <div class="text-gray-400">Location: Mumbai, 2BHK</div>
+                        <div class="text-neon-blue">Predicted: ₹85.2L</div>
+                        <div class="text-neon-purple">Confidence: 94.7%</div>
+                    </div>
+                    
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Streamlit web app with ML-powered property recommendations, client profiling, and predictive
-                        analytics for real estate professionals.
+                        ML-powered property recommendations with client profiling and predictive analytics. 
+                        <span class="text-neon-blue font-semibold">Try the live demo!</span>
                     </p>
+                    
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Streamlit</span>
                         <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Scikit-learn</span>
                         <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Pandas</span>
                     </div>
+                    
                     <div class="mt-auto flex gap-2">
-                        <a href="https://intelligentrealestateassistantgit-007.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
-                            <span class="font-mono">{'Live Demo'}</span>
+                        <a href="https://intelligentrealestateassistantgit-007.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
+                            <span class="font-mono">🚀 Live Demo</span>
                         </a>
                         <a href="https://github.com/VikasDs007/intelligent_real_estate_assistant" target="_blank" class="btn-secondary flex-1 text-center">
                             <span class="font-mono">{'Code'}</span>
@@ -802,26 +988,42 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="card-interactive card-purple group">
+                <div class="card-interactive card-purple group relative overflow-hidden">
+                    <!-- Interactive Preview -->
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-neon-purple/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
                     <div class="mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-green rounded-lg flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-green rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <span class="text-black font-bold text-xl">🎬</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-purple transition-colors">
                             Movie Recommendation System
                         </h3>
+                        <div class="text-xs text-neon-purple font-mono mt-1">🟢 Live & Interactive</div>
                     </div>
+                    
+                    <!-- Mini Demo Preview -->
+                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
+                        <div class="text-neon-green mb-1">$ recommend_movies("Inception")</div>
+                        <div class="text-gray-400">Similar movies found:</div>
+                        <div class="text-neon-purple">• Interstellar (95% match)</div>
+                        <div class="text-neon-blue">• The Matrix (92% match)</div>
+                    </div>
+                    
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Content-based movie recommendation system using machine learning algorithms to suggest movies based on user preferences and movie features.
+                        Content-based recommendation engine using ML algorithms for personalized movie suggestions. 
+                        <span class="text-neon-purple font-semibold">Try it now!</span>
                     </p>
+                    
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Content-Based</span>
                         <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">ML Algorithms</span>
                         <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Python</span>
                     </div>
+                    
                     <div class="mt-auto flex gap-2">
-                        <a href="https://content-base-movie-recommendation.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
-                            <span class="font-mono">{'Live Demo'}</span>
+                        <a href="https://content-base-movie-recommendation.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
+                            <span class="font-mono">🚀 Live Demo</span>
                         </a>
                         <a href="https://github.com/VikasDs007/Content-Base-Movie-Recommendation" target="_blank" class="btn-secondary flex-1 text-center">
                             <span class="font-mono">{'Code'}</span>
@@ -830,26 +1032,42 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="card-interactive card-green group">
+                <div class="card-interactive card-green group relative overflow-hidden">
+                    <!-- Interactive Preview -->
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-neon-green/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
                     <div class="mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-lg flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                             <span class="text-black font-bold text-xl">🛡️</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-green transition-colors">
                             AI Insurance Predictor
                         </h3>
+                        <div class="text-xs text-neon-green font-mono mt-1">🟢 Live & Interactive</div>
                     </div>
+                    
+                    <!-- Mini Demo Preview -->
+                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
+                        <div class="text-neon-green mb-1">$ predict_insurance_cost()</div>
+                        <div class="text-gray-400">Age: 30, BMI: 25.5</div>
+                        <div class="text-neon-green">Premium: $4,250/year</div>
+                        <div class="text-neon-blue">Risk Score: Low</div>
+                    </div>
+                    
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        AI-powered insurance cost prediction system using machine learning to estimate insurance premiums based on demographic and health factors.
+                        AI-powered insurance cost prediction using demographic and health factors. 
+                        <span class="text-neon-green font-semibold">Get instant quotes!</span>
                     </p>
+                    
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">AI Prediction</span>
                         <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Machine Learning</span>
                         <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Streamlit</span>
                     </div>
+                    
                     <div class="mt-auto flex gap-2">
-                        <a href="https://ai-insurance-predictor.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center">
-                            <span class="font-mono">{'Live Demo'}</span>
+                        <a href="https://ai-insurance-predictor.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
+                            <span class="font-mono">🚀 Live Demo</span>
                         </a>
                         <a href="https://github.com/VikasDs007/Medical-Expenses-Prediction" target="_blank" class="btn-secondary flex-1 text-center">
                             <span class="font-mono">{'Code'}</span>
@@ -1370,21 +1588,39 @@ ${data.data_details}
             });
         }
 
-        // Skills Progress Animation
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.progress-fill');
+        // Enhanced Skills Animation
+        function animateSkillBadges() {
+            const skillBadges = document.querySelectorAll('.skill-badge');
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        const width = entry.target.getAttribute('data-width');
                         setTimeout(() => {
-                            entry.target.style.width = width + '%';
-                        }, 200);
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0) scale(1)';
+                            
+                            // Animate dots with stagger
+                            const dots = entry.target.querySelectorAll('.dot.active');
+                            dots.forEach((dot, dotIndex) => {
+                                setTimeout(() => {
+                                    dot.style.transform = 'scale(1.1)';
+                                    dot.style.boxShadow = '0 0 12px rgba(0, 212, 255, 0.6)';
+                                    setTimeout(() => {
+                                        dot.style.transform = 'scale(1)';
+                                        dot.style.boxShadow = '0 0 8px rgba(0, 212, 255, 0.4)';
+                                    }, 200);
+                                }, dotIndex * 100);
+                            });
+                        }, index * 150);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.3 });
 
-            skillBars.forEach(bar => observer.observe(bar));
+            skillBadges.forEach(badge => {
+                badge.style.opacity = '0';
+                badge.style.transform = 'translateY(20px) scale(0.9)';
+                badge.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(badge);
+            });
         }
 
         // Loading Animation for Elements
@@ -1464,7 +1700,7 @@ ${data.data_details}
             
             // Delay heavy operations for better initial load
             setTimeout(() => {
-                animateSkillBars();
+                animateSkillBadges();
                 animateDataScienceStats();
             }, 500);
             
@@ -1511,6 +1747,169 @@ ${data.data_details}
                 // Close mobile menu on resize
                 closeMobileMenu();
             }, 250);
+        });
+
+        // Advanced Scroll-Triggered Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe project cards
+            document.querySelectorAll('.card-interactive').forEach((card, index) => {
+                card.classList.add('scroll-reveal', `stagger-${(index % 3) + 1}`);
+                observer.observe(card);
+            });
+
+            // Observe skill badges
+            document.querySelectorAll('.skill-badge').forEach((badge, index) => {
+                badge.classList.add('scroll-reveal');
+                badge.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(badge);
+            });
+        }
+
+        // Interactive Particle Trail Effect
+        function createParticleTrail(e) {
+            const particle = document.createElement('div');
+            particle.className = 'particle-trail';
+            particle.style.left = e.clientX + 'px';
+            particle.style.top = e.clientY + 'px';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        }
+
+        // Enhanced Project Card Interactions
+        function initProjectInteractions() {
+            document.querySelectorAll('.card-interactive').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('pulse-glow');
+                    
+                    // Add floating animation to tech badges
+                    this.querySelectorAll('.px-2').forEach((badge, index) => {
+                        badge.style.animationDelay = `${index * 0.2}s`;
+                        badge.classList.add('tech-badge-float');
+                    });
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('pulse-glow');
+                    this.querySelectorAll('.px-2').forEach(badge => {
+                        badge.classList.remove('tech-badge-float');
+                    });
+                });
+
+                // Add particle trail on mouse move
+                card.addEventListener('mousemove', createParticleTrail);
+            });
+        }
+
+        // Interactive Code Terminal Animation
+        function animateCodeTerminal() {
+            const terminals = document.querySelectorAll('.bg-black\\/30');
+            terminals.forEach(terminal => {
+                const lines = terminal.querySelectorAll('div');
+                lines.forEach((line, index) => {
+                    line.style.opacity = '0';
+                    line.style.transform = 'translateX(-10px)';
+                    
+                    setTimeout(() => {
+                        line.style.transition = 'all 0.5s ease';
+                        line.style.opacity = '1';
+                        line.style.transform = 'translateX(0)';
+                    }, index * 200);
+                });
+            });
+        }
+
+        // Enhanced Typing Animation
+        function enhancedTypingEffect() {
+            const typingElements = document.querySelectorAll('.typing');
+            typingElements.forEach(element => {
+                const text = element.textContent;
+                element.textContent = '';
+                
+                let i = 0;
+                const typeInterval = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeInterval);
+                    }
+                }, 100);
+            });
+        }
+
+        // Performance Optimized Particle System
+        function initAdvancedParticles() {
+            if (window.particlesJS) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: ['#00D4FF', '#8B5CF6', '#00FF88'] },
+                        shape: { type: 'circle' },
+                        opacity: { value: 0.5, random: true },
+                        size: { value: 3, random: true },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#00D4FF',
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 2,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false,
+                            attract: { enable: true, rotateX: 600, rotateY: 1200 }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: { enable: true, mode: 'repulse' },
+                            onclick: { enable: true, mode: 'push' },
+                            resize: true
+                        },
+                        modes: {
+                            grab: { distance: 400, line_linked: { opacity: 1 } },
+                            bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                            repulse: { distance: 200, duration: 0.4 },
+                            push: { particles_nb: 4 },
+                            remove: { particles_nb: 2 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+        }
+
+        // Initialize all advanced features
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                initScrollAnimations();
+                initProjectInteractions();
+                animateCodeTerminal();
+                enhancedTypingEffect();
+                initAdvancedParticles();
+            }, 500);
         });
     </script>
 
