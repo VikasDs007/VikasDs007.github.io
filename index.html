@@ -106,74 +106,131 @@
             background-size: 50px 50px;
         }
 
-        /* === CONSISTENT BUTTON STYLES === */
+        /* === MAGNETIC BUTTON STYLES === */
         .btn-primary {
-            background: linear-gradient(to right, #00D4FF, #8B5CF6);
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
             color: #000;
             font-weight: 600;
             padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             border: 1px solid rgba(0, 212, 255, 0.3);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
-            transition: all 0.3s ease;
-            transform: scale(1);
+            box-shadow: 
+                0 4px 15px rgba(0, 212, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0) scale(1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
         }
 
         .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 8px 25px rgba(0, 212, 255, 0.4),
+                0 0 30px rgba(0, 212, 255, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: rgba(0, 212, 255, 0.1);
+            backdrop-filter: blur(10px);
             color: #00D4FF;
             font-weight: 600;
             padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             border: 1px solid rgba(0, 212, 255, 0.5);
-            transition: all 0.3s ease;
-            transform: scale(1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0) scale(1);
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-secondary:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+            border-color: rgba(0, 212, 255, 0.8);
         }
 
         .btn-tertiary {
-            background: transparent;
+            background: rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(10px);
             color: #00FF88;
             font-weight: 600;
             padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             border: 1px solid rgba(0, 255, 136, 0.5);
-            transition: all 0.3s ease;
-            transform: scale(1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0) scale(1);
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-tertiary:hover {
-            background: rgba(0, 255, 136, 0.1);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            background: rgba(0, 255, 136, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+            border-color: rgba(0, 255, 136, 0.8);
         }
 
-        /* === CONSISTENT CARD STYLES === */
+        /* === GLASSMORPHISM CARD STYLES === */
         .card-interactive {
-            background: linear-gradient(45deg, rgba(0, 212, 255, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
-            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
             padding: 1.5rem;
-            transition: all 0.3s ease;
-            transform: scale(1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0) scale(1);
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-interactive::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .card-interactive:hover::before {
+            left: 100%;
         }
 
         .card-interactive:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 212, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .card-blue:hover {
@@ -430,6 +487,32 @@
             filter: brightness(1.4) drop-shadow(0 0 8px rgba(0, 212, 255, 0.4));
         }
 
+        /* === PROFESSIONAL PHOTO STYLING === */
+        .profile-photo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-photo-container:hover .profile-photo {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .profile-photo {
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #00D4FF, #8B5CF6, #00FF88) border-box;
+        }
+
+        .status-badge {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
         /* === ADVANCED ANIMATIONS === */
         .project-card-enter {
             opacity: 0;
@@ -481,21 +564,58 @@
             66% { transform: translateY(5px) rotate(-1deg); }
         }
 
-        /* === SCROLL TRIGGERED ANIMATIONS === */
+        /* === ADVANCED SCROLL ANIMATIONS === */
         .scroll-reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+            transform: translateY(50px) rotateX(10deg);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-origin: center bottom;
         }
 
         .scroll-reveal.revealed {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) rotateX(0deg);
+        }
+
+        .scroll-reveal-left {
+            opacity: 0;
+            transform: translateX(-50px) rotateY(10deg);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .scroll-reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0) rotateY(0deg);
+        }
+
+        .scroll-reveal-right {
+            opacity: 0;
+            transform: translateX(50px) rotateY(-10deg);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .scroll-reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0) rotateY(0deg);
+        }
+
+        .scroll-reveal-scale {
+            opacity: 0;
+            transform: scale(0.8) rotateZ(5deg);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .scroll-reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1) rotateZ(0deg);
         }
 
         .stagger-1 { transition-delay: 0.1s; }
         .stagger-2 { transition-delay: 0.2s; }
         .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
 
         /* === INTERACTIVE PARTICLE EFFECTS === */
         .particle-trail {
@@ -569,7 +689,7 @@
                         class="hover:text-neon-green transition-colors">
                         GitHub
                     </a>
-                    <a href="Vikas_Resume.pdf" download
+                    <a href="Resume_Vikas.pdf" download
                         class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all border border-neon-blue/30">
                         Resume
                     </a>
@@ -596,7 +716,7 @@
                             class="hover:text-neon-green transition-colors" onclick="closeMobileMenu()">
                             GitHub
                         </a>
-                        <a href="Vikas_Resume.pdf" download
+                        <a href="Resume_Vikas.pdf" download
                             class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold text-center border border-neon-blue/30">
                             Resume
                         </a>
@@ -695,9 +815,9 @@
                             <div><span class="text-neon-green">$</span> <span class="text-gray-300">model = RandomForestRegressor()</span></div>
                             <div><span class="text-neon-green">$</span> <span class="text-gray-300">model.fit(X_train, y_train)</span></div>
                             <div class="text-neon-blue">Training completed ✓</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">accuracy = model.score(X_test, y_test)</span></div>
-                            <div class="text-neon-purple">Accuracy: 94.7%</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">deploy_model()</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model.fit(X_train, y_train)</span></div>
+                            <div class="text-neon-purple">Status: Ready for deployment</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">streamlit run app.py</span></div>
                         </div>
                     </div>
                 </div>
@@ -712,6 +832,25 @@
                 <h2 class="text-4xl font-bold mb-6">
                     <span class="gradient-text">About Me</span>
                 </h2>
+                
+                <!-- Professional Photo -->
+                <div class="mb-12">
+                    <div class="relative inline-block">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden neon-border p-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
+                            <img src="Vikas_Headshot.jpg" alt="Vikas Chaurasia - Data Scientist" 
+                                 class="w-full h-full object-cover rounded-full bg-gray-800"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="w-full h-full rounded-full bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-6xl" style="display: none;">
+                                👨‍💻
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center text-black font-bold text-xl">
+                            ✓
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4 font-mono">Data Scientist & ML Engineer</p>
+                </div>
+                
                 <div class="max-w-4xl mx-auto space-y-8">
                     <!-- Main Story -->
                     <div class="space-y-6">
@@ -726,22 +865,25 @@
                         </p>
                     </div>
 
-                    <!-- Impact Stats -->
+                    <!-- Data Science Lifecycle -->
                     <div class="grid md:grid-cols-3 gap-6 py-8">
                         <div class="text-center card-interactive p-6">
-                            <div class="text-3xl font-bold text-neon-blue mb-2">50%</div>
-                            <div class="text-sm text-gray-400">Client Capacity Increase</div>
-                            <div class="text-xs text-neon-blue mt-1">Operations Optimization</div>
+                            <div class="text-4xl mb-2">📊</div>
+                            <div class="text-xl font-bold text-neon-blue mb-2">Analyze</div>
+                            <div class="text-sm text-gray-400">Data Exploration</div>
+                            <div class="text-xs text-neon-blue mt-1">Phase 1</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-3xl font-bold text-neon-purple mb-2">20%</div>
-                            <div class="text-sm text-gray-400">Marketing Fund Reallocation</div>
-                            <div class="text-xs text-neon-purple mt-1">Data-Driven Strategy</div>
+                            <div class="text-4xl mb-2">🤖</div>
+                            <div class="text-xl font-bold text-neon-purple mb-2">Model</div>
+                            <div class="text-sm text-gray-400">ML Development</div>
+                            <div class="text-xs text-neon-purple mt-1">Phase 2</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-3xl font-bold text-neon-green mb-2">94.7%</div>
-                            <div class="text-sm text-gray-400">Model Accuracy</div>
-                            <div class="text-xs text-neon-green mt-1">ML Performance</div>
+                            <div class="text-4xl mb-2">🚀</div>
+                            <div class="text-xl font-bold text-neon-green mb-2">Deploy</div>
+                            <div class="text-sm text-gray-400">Production Ready</div>
+                            <div class="text-xs text-neon-green mt-1">Phase 3</div>
                         </div>
                     </div>
 
@@ -930,9 +1072,9 @@
                         <div class="text-xs text-neon-blue mt-1">Interactive Apps</div>
                     </div>
                     <div class="card-interactive p-4">
-                        <div class="text-2xl font-bold text-neon-purple mb-2">94.7%</div>
-                        <div class="text-sm text-gray-400">Model Accuracy</div>
-                        <div class="text-xs text-neon-purple mt-1">ML Performance</div>
+                        <div class="text-2xl font-bold text-neon-purple mb-2">∞</div>
+                        <div class="text-sm text-gray-400">Curiosity Drive</div>
+                        <div class="text-xs text-neon-purple mt-1">Learning Mindset</div>
                     </div>
                     <div class="card-interactive p-4">
                         <div class="text-2xl font-bold text-neon-green mb-2">Real-time</div>
@@ -963,7 +1105,7 @@
                         <div class="text-neon-green mb-1">$ predict_property_value()</div>
                         <div class="text-gray-400">Location: Mumbai, 2BHK</div>
                         <div class="text-neon-blue">Predicted: ₹85.2L</div>
-                        <div class="text-neon-purple">Confidence: 94.7%</div>
+                        <div class="text-neon-purple">Status: Deployed</div>
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
@@ -1668,7 +1810,7 @@ ${data.data_details}
             // Track resume downloads
             document.querySelectorAll('a[download]').forEach(link => {
                 link.addEventListener('click', () => {
-                    trackEvent('download', 'resume', 'vikas_resume.pdf');
+                    trackEvent('download', 'resume', 'resume_vikas.pdf');
                 });
             });
         }
@@ -1752,8 +1894,8 @@ ${data.data_details}
         // Advanced Scroll-Triggered Animations
         function initScrollAnimations() {
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.15,
+                rootMargin: '0px 0px -100px 0px'
             };
 
             const observer = new IntersectionObserver((entries) => {
@@ -1764,17 +1906,46 @@ ${data.data_details}
                 });
             }, observerOptions);
 
-            // Observe project cards
+            // Observe project cards with different animation types
             document.querySelectorAll('.card-interactive').forEach((card, index) => {
-                card.classList.add('scroll-reveal', `stagger-${(index % 3) + 1}`);
+                const animationType = ['scroll-reveal', 'scroll-reveal-left', 'scroll-reveal-right'][index % 3];
+                card.classList.add(animationType, `stagger-${index + 1}`);
                 observer.observe(card);
             });
 
-            // Observe skill badges
+            // Observe skill badges with scale animation
             document.querySelectorAll('.skill-badge').forEach((badge, index) => {
-                badge.classList.add('scroll-reveal');
+                badge.classList.add('scroll-reveal-scale');
                 badge.style.transitionDelay = `${index * 0.1}s`;
                 observer.observe(badge);
+            });
+
+            // Observe sections with different reveal types
+            document.querySelectorAll('section').forEach((section, index) => {
+                if (index > 0) { // Skip hero section
+                    section.classList.add('scroll-reveal', `stagger-${Math.min(index, 6)}`);
+                    observer.observe(section);
+                }
+            });
+        }
+
+        // Magnetic Button Effect
+        function initMagneticButtons() {
+            document.querySelectorAll('.btn-primary, .btn-secondary, .btn-tertiary').forEach(button => {
+                button.addEventListener('mousemove', (e) => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    const moveX = x * 0.1;
+                    const moveY = y * 0.1;
+                    
+                    button.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translate(0px, 0px) scale(1)';
+                });
             });
         }
 
@@ -1853,46 +2024,57 @@ ${data.data_details}
             });
         }
 
-        // Performance Optimized Particle System
+        // Enhanced Particle System
         function initAdvancedParticles() {
             if (window.particlesJS) {
                 particlesJS('particles-js', {
                     particles: {
-                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        number: { value: 60, density: { enable: true, value_area: 1000 } },
                         color: { value: ['#00D4FF', '#8B5CF6', '#00FF88'] },
-                        shape: { type: 'circle' },
-                        opacity: { value: 0.5, random: true },
-                        size: { value: 3, random: true },
+                        shape: { 
+                            type: ['circle', 'triangle'],
+                            stroke: { width: 0, color: '#000000' }
+                        },
+                        opacity: { 
+                            value: 0.4, 
+                            random: true,
+                            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+                        },
+                        size: { 
+                            value: 4, 
+                            random: true,
+                            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+                        },
                         line_linked: {
                             enable: true,
-                            distance: 150,
+                            distance: 120,
                             color: '#00D4FF',
-                            opacity: 0.2,
+                            opacity: 0.15,
                             width: 1
                         },
                         move: {
                             enable: true,
-                            speed: 2,
+                            speed: 1.5,
                             direction: 'none',
                             random: true,
                             straight: false,
                             out_mode: 'out',
                             bounce: false,
-                            attract: { enable: true, rotateX: 600, rotateY: 1200 }
+                            attract: { enable: true, rotateX: 800, rotateY: 1600 }
                         }
                     },
                     interactivity: {
                         detect_on: 'canvas',
                         events: {
-                            onhover: { enable: true, mode: 'repulse' },
-                            onclick: { enable: true, mode: 'push' },
+                            onhover: { enable: true, mode: 'bubble' },
+                            onclick: { enable: true, mode: 'repulse' },
                             resize: true
                         },
                         modes: {
-                            grab: { distance: 400, line_linked: { opacity: 1 } },
-                            bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-                            repulse: { distance: 200, duration: 0.4 },
-                            push: { particles_nb: 4 },
+                            grab: { distance: 300, line_linked: { opacity: 0.8 } },
+                            bubble: { distance: 250, size: 8, duration: 2, opacity: 0.8, speed: 3 },
+                            repulse: { distance: 150, duration: 0.4 },
+                            push: { particles_nb: 3 },
                             remove: { particles_nb: 2 }
                         }
                     },
@@ -1906,6 +2088,7 @@ ${data.data_details}
             setTimeout(() => {
                 initScrollAnimations();
                 initProjectInteractions();
+                initMagneticButtons();
                 animateCodeTerminal();
                 enhancedTypingEffect();
                 initAdvancedParticles();
