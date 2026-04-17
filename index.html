@@ -4,22 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Vikas Chaurasia - Data Scientist & ML Engineer specializing in Python, Machine Learning, and Advanced Analytics. MSc in Data Science.">
-    <meta name="keywords" content="Data Scientist, Machine Learning, Python, Analytics, Mumbai, India">
+    <meta name="description" content="Vikas Chaurasia - Data Analyst specializing in SQL, Power BI, Python, ETL pipelines, KPI reporting, data governance, and stakeholder-focused analytics. MSc in Data Science & Business Analytics.">
+    <meta name="keywords" content="Data Analyst, Business Intelligence, SQL, Power BI, Tableau, Python, ETL, Data Governance, KPI Reporting, Stakeholder Reporting, Exploratory Data Analysis, Mumbai, India">
     <meta name="author" content="Vikas Chaurasia">
-    <title>Vikas Chaurasia | Data Scientist & ML Engineer</title>
+    <title>Vikas Chaurasia | Data Analyst</title>
     
     <!-- SEO & Social Media Meta Tags -->
-    <meta property="og:title" content="Vikas Chaurasia - Data Scientist & ML Engineer">
-    <meta property="og:description" content="Interactive portfolio showcasing data science projects with live demos. Specializing in Python, Machine Learning, and Advanced Analytics.">
+    <meta property="og:title" content="Vikas Chaurasia - Data Analyst">
+    <meta property="og:description" content="Interactive portfolio showcasing ETL workflows, KPI dashboards, and stakeholder-focused data analytics projects using SQL, Power BI, Tableau, and Python.">
     <meta property="og:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
     <meta property="og:url" content="https://vikasds007.github.io">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vikas Chaurasia - Data Scientist & ML Engineer">
-    <meta name="twitter:description" content="Interactive portfolio with live ML demos and data science projects">
+    <meta name="twitter:title" content="Vikas Chaurasia - Data Analyst">
+    <meta name="twitter:description" content="Portfolio with ETL workflows, KPI dashboards, and business-focused data analytics outcomes">
     <meta name="twitter:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
+    
+    <!-- Structured Data - Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vikas Chaurasia",
+      "jobTitle": "Data Analyst",
+      "image": "https://vikasds007.github.io/assets/images/Vikas.png",
+      "url": "https://vikasds007.github.io",
+      "sameAs": [
+        "https://www.linkedin.com/in/vikasds007/",
+        "https://github.com/VikasDs007"
+      ],
+      "contact": {
+        "@type": "ContactPoint",
+        "contactType": "Career Opportunity",
+        "url": "https://vikasds007.github.io/#contact"
+      },
+      "knowsAbout": [
+        "Data Analysis",
+        "SQL",
+        "Python",
+        "Power BI",
+        "Tableau",
+        "ETL Pipelines",
+        "Data Governance",
+        "KPI Reporting",
+        "Business Intelligence",
+        "Exploratory Data Analysis"
+      ],
+      "educationCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "M.Sc. Data Science & Business Analytics"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - CreativeWork (Portfolio) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Data Analyst Portfolio",
+      "description": "Interactive portfolio showcasing ETL workflows, KPI dashboards, and stakeholder-focused data analytics projects",
+      "creator": {
+        "@type": "Person",
+        "name": "Vikas Chaurasia"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-04-17",
+      "url": "https://vikasds007.github.io",
+      "image": "https://vikasds007.github.io/assets/images/Vikas.png",
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- Structured Data - Organization (Professional Work) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BluBrick Realty",
+      "description": "Professional work experience: Improved reporting efficiency by 30% through ETL optimization and KPI dashboard development",
+      "url": "https://vikasds007.github.io/#about"
+    }
+    </script>
     
     <!-- PWA Features -->
     <link rel="manifest" href="manifest.json">
@@ -168,7 +235,145 @@
             border-color: rgba(0, 212, 255, 0.8);
         }
 
-        .btn-tertiary {
+        /* === PROJECT CARD BUTTON OPTIMIZATION === */
+        .project-btn-primary {
+            background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.9rem 1.5rem;
+            min-height: 48px;
+            border-radius: 0.6rem;
+            border: none;
+            box-shadow: 
+                0 6px 20px rgba(0, 212, 255, 0.25),
+                0 0 20px rgba(0, 255, 136, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .project-btn-primary {
+                padding: 1rem 1.2rem;
+                min-height: 52px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .project-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .project-btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                0 10px 30px rgba(0, 212, 255, 0.35),
+                0 0 40px rgba(0, 255, 136, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .project-btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .project-btn-secondary {
+            background: rgba(139, 92, 246, 0.15);
+            backdrop-filter: blur(10px);
+            color: #8B5CF6;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.9rem 1.5rem;
+            min-height: 48px;
+            border-radius: 0.6rem;
+            border: 1.5px solid rgba(139, 92, 246, 0.4);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .project-btn-secondary {
+                padding: 1rem 1.2rem;
+                min-height: 52px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .project-btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .project-btn-secondary:hover {
+            background: rgba(139, 92, 246, 0.25);
+            border-color: rgba(139, 92, 246, 0.7);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
+            color: #A78BFA;
+        }
+
+        .project-btn-secondary:hover::after {
+            left: 100%;
+        }
+
+        /* === MOBILE OPTIMIZATION === */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            min-height: 44px;
+        }
+
+        @media (max-width: 640px) {
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select,
+            textarea {
+                min-height: 48px;
+                font-size: 16px;
+            }
+
+            .btn-primary {
+                min-height: 48px;
+                padding: 0.9rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .btn-secondary {
+                min-height: 48px;
+                padding: 0.9rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
             background: rgba(0, 255, 136, 0.1);
             backdrop-filter: blur(10px);
             color: #00FF88;
@@ -689,7 +894,7 @@
                         class="hover:text-neon-green transition-colors">
                         GitHub
                     </a>
-                    <a href="Vikas_Resume_DataScientist.pdf" download
+                    <a href="assets/docs/Vikas_Chaurasia_Data_Analyst.pdf" download
                         class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all border border-neon-blue/30">
                         Resume
                     </a>
@@ -716,7 +921,7 @@
                             class="hover:text-neon-green transition-colors" onclick="closeMobileMenu()">
                             GitHub
                         </a>
-                        <a href="Vikas_Resume_DataScientist.pdf" download
+                        <a href="assets/docs/Vikas_Chaurasia_Data_Analyst.pdf" download
                             class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold text-center border border-neon-blue/30">
                             Resume
                         </a>
@@ -744,15 +949,15 @@
                             <span class="text-white">Chaurasia</span>
                         </h1>
                         <div class="font-mono text-xl text-gray-300 typing">
-                            Data Scientist & ML Engineer
+                            Data Analyst | Business Intelligence
                         </div>
                     </div>
 
                     <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-                        Transforming raw data into actionable insights using
-                        <span class="text-neon-blue font-semibold">Python</span>,
-                        <span class="text-neon-purple font-semibold">Machine Learning</span>, and
-                        <span class="text-neon-green font-semibold">Advanced Analytics</span>
+                        Turning complex data into business intelligence using
+                        <span class="text-neon-blue font-semibold">SQL</span>,
+                        <span class="text-neon-purple font-semibold">Power BI / Tableau</span>, and
+                        <span class="text-neon-green font-semibold">Python (Pandas, NumPy)</span>
                     </p>
 
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -781,21 +986,21 @@
                     </div>
 
                     <!-- Live Stats -->
-                    <div class="grid grid-cols-3 gap-3 md:gap-6 pt-8">
-                        <div class="text-center card-interactive card-blue p-2 md:p-4">
-                            <div class="text-lg md:text-xl font-bold text-neon-blue glow-text">M.Sc</div>
-                            <div class="text-xs md:text-sm text-gray-400">Data Science &</div>
-                            <div class="text-xs text-neon-blue mt-1">Business Analytics</div>
+                    <div class="grid grid-cols-3 gap-4 md:gap-8 pt-8">
+                        <div class="text-center card-interactive card-blue p-4 md:p-6">
+                            <div class="text-2xl md:text-3xl font-bold text-neon-blue glow-text">M.Sc.</div>
+                            <div class="text-sm md:text-base text-gray-400 mt-2">Data Science &</div>
+                            <div class="text-sm text-neon-blue mt-1 font-semibold">Business Analytics</div>
                         </div>
-                        <div class="text-center card-interactive card-purple p-2 md:p-4">
-                            <div class="text-lg md:text-xl font-bold text-neon-purple glow-text">AI/ML</div>
-                            <div class="text-xs md:text-sm text-gray-400">Specialist</div>
-                            <div class="text-xs text-neon-purple mt-1">Expert</div>
+                        <div class="text-center card-interactive card-purple p-4 md:p-6">
+                            <div class="text-2xl md:text-3xl font-bold text-neon-purple glow-text">BI</div>
+                            <div class="text-sm md:text-base text-gray-400 mt-2">Dashboard &</div>
+                            <div class="text-sm text-neon-purple mt-1 font-semibold">Reporting</div>
                         </div>
-                        <div class="text-center card-interactive card-green p-2 md:p-4">
-                            <div class="text-lg md:text-xl font-bold text-neon-green glow-text">Python</div>
-                            <div class="text-xs md:text-sm text-gray-400">Data Science</div>
-                            <div class="text-xs text-neon-green mt-1">Ecosystem</div>
+                        <div class="text-center card-interactive card-green p-4 md:p-6">
+                            <div class="text-2xl md:text-3xl font-bold text-neon-green glow-text">SQL</div>
+                            <div class="text-sm md:text-base text-gray-400 mt-2">Querying &</div>
+                            <div class="text-sm text-neon-green mt-1 font-semibold">KPI Analysis</div>
                         </div>
                     </div>
                 </div>
@@ -811,13 +1016,13 @@
                         </div>
                         <div class="space-y-2">
                             <div><span class="text-neon-green">$</span> <span class="text-gray-300">import pandas as pd</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">from sklearn.ensemble import RandomForestRegressor</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model = RandomForestRegressor()</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model.fit(X_train, y_train)</span></div>
-                            <div class="text-neon-blue">Training completed ✓</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">model.fit(X_train, y_train)</span></div>
-                            <div class="text-neon-purple">Status: Ready for deployment</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">streamlit run app.py</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import pandas as pd</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import sqlite3</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">SELECT channel, SUM(revenue) FROM sales GROUP BY channel;</span></div>
+                            <div class="text-neon-blue">Insight found: Paid Search drives highest ROI ✓</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">build_kpi_dashboard(data)</span></div>
+                            <div class="text-neon-purple">Status: Stakeholder-ready report</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">publish dashboard to Power BI</span></div>
                         </div>
                     </div>
                 </div>
@@ -837,7 +1042,7 @@
                 <div class="mb-12">
                     <div class="relative inline-block">
                         <div class="w-48 h-48 mx-auto rounded-full overflow-hidden neon-border p-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
-                            <img src="Vikas.png" alt="Vikas Chaurasia - Data Scientist" 
+                               <img src="Vikas.png" alt="Vikas Chaurasia - Data Analyst" 
                                  class="w-full h-full object-cover rounded-full bg-gray-800"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="w-full h-full rounded-full bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-6xl" style="display: none;">
@@ -849,24 +1054,24 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold text-white mt-4 mb-2">Vikas Chaurasia</h3>
-                    <p class="text-gray-400 text-sm font-mono">Data Scientist & ML Engineer</p>
+                    <p class="text-gray-400 text-sm font-mono">Data Analyst & Business Intelligence</p>
                 </div>
                 
                 <div class="max-w-4xl mx-auto space-y-8">
                     <!-- Main Story -->
                     <div class="space-y-6">
                         <p class="text-xl text-gray-300 leading-relaxed">
-                            From <span class="text-neon-blue font-semibold">Analyst, Operations</span> to <span class="text-neon-purple font-semibold">Data Scientist & ML Engineer</span> — 
-                            my journey is fueled by an obsession with turning messy data into game-changing insights.
+                            From <span class="text-neon-blue font-semibold">Analyst, Operations</span> to <span class="text-neon-purple font-semibold">Data Analyst</span> —
+                            my journey is focused on turning operational and customer data into decisions teams can act on.
                         </p>
                         <p class="text-lg text-gray-400 leading-relaxed">
-                            Armed with an <span class="text-neon-green font-semibold">MSc in Data Science & Business Analytics</span>, 
-                            I don't just crunch numbers — I architect intelligent solutions that make businesses smarter, 
-                            faster, and more profitable. Every dataset tells a story; I'm here to decode it.
+                            With an <span class="text-neon-green font-semibold">MSc in Data Science & Business Analytics</span>,
+                            I combine SQL, Python, ETL workflows, and BI reporting to deliver clean datasets, reliable KPI tracking,
+                            and actionable stakeholder reporting for measurable outcomes.
                         </p>
                     </div>
 
-                    <!-- Data Science Lifecycle -->
+                    <!-- Analytics Workflow -->
                     <div class="grid md:grid-cols-3 gap-6 py-8">
                         <div class="text-center card-interactive p-6">
                             <div class="text-4xl mb-2">📊</div>
@@ -875,15 +1080,15 @@
                             <div class="text-xs text-neon-blue mt-1">Phase 1</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-4xl mb-2">🤖</div>
-                            <div class="text-xl font-bold text-neon-purple mb-2">Model</div>
-                            <div class="text-sm text-gray-400">ML Development</div>
+                            <div class="text-4xl mb-2">📈</div>
+                            <div class="text-xl font-bold text-neon-purple mb-2">Visualize</div>
+                            <div class="text-sm text-gray-400">KPI Dashboards</div>
                             <div class="text-xs text-neon-purple mt-1">Phase 2</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-4xl mb-2">🚀</div>
-                            <div class="text-xl font-bold text-neon-green mb-2">Deploy</div>
-                            <div class="text-sm text-gray-400">Production Ready</div>
+                            <div class="text-4xl mb-2">✅</div>
+                            <div class="text-xl font-bold text-neon-green mb-2">Recommend</div>
+                            <div class="text-sm text-gray-400">Business Actions</div>
                             <div class="text-xs text-neon-green mt-1">Phase 3</div>
                         </div>
                     </div>
@@ -891,23 +1096,23 @@
                     <!-- What I Do -->
                     <div class="grid md:grid-cols-2 gap-8 mt-12">
                         <div class="space-y-4">
-                            <h3 class="text-xl font-bold text-neon-blue font-mono">// What I Build</h3>
+                            <h3 class="text-xl font-bold text-neon-blue font-mono">// What I Deliver</h3>
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">▶</span>
-                                    <span>Predictive models that forecast business outcomes</span>
+                                    <span>Executive dashboards with trackable KPI definitions</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">▶</span>
-                                    <span>Interactive dashboards for real-time insights</span>
+                                    <span>SQL analysis to uncover growth, churn, and funnel leaks</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-purple">▶</span>
-                                    <span>Automated ML pipelines for scalable solutions</span>
+                                    <span>ETL-ready datasets with strong QA and data governance</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">▶</span>
-                                    <span>Data-driven strategies that drive ROI</span>
+                                    <span>Data stories that drive stakeholder decisions</span>
                                 </li>
                             </ul>
                         </div>
@@ -916,19 +1121,19 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">🧠</span>
-                                    <span>Think like a business owner, code like an engineer</span>
+                                    <span>Frame every analysis around business questions first</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">⚡</span>
-                                    <span>Rapid prototyping with production-ready mindset</span>
+                                    <span>Build accurate dashboards and KPI reports stakeholders trust</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-purple">📊</span>
-                                    <span>Data storytelling that drives decision-making</span>
+                                    <span>Tell clear stories with metrics, trends, and context</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">🚀</span>
-                                    <span>Continuous learning and adaptation</span>
+                                    <span>Collaborate cross-functionally under tight business timelines</span>
                                 </li>
                             </ul>
                         </div>
@@ -937,7 +1142,7 @@
                     <!-- Call to Action -->
                     <div class="text-center pt-8">
                         <p class="text-lg text-gray-400 mb-6">
-                            Ready to turn your data into your competitive advantage?
+                            Looking for a data analyst who turns numbers into action?
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="#projects" class="btn-primary">
@@ -955,7 +1160,7 @@
                 <!-- Technical Skills -->
                 <div class="card-3d skill-card-3d code-bg rounded-lg p-8 neon-border">
                     <div class="card-inner">
-                        <h3 class="text-2xl font-bold mb-6 gradient-text">Technical Arsenal</h3>
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">Analytics Toolkit</h3>
                         <div class="space-y-6">
                             <!-- Core Technologies -->
                             <div class="skill-category">
@@ -978,9 +1183,9 @@
                                 </div>
                             </div>
                             
-                            <!-- ML/AI Frameworks -->
+                            <!-- Analytics Libraries -->
                             <div class="skill-category">
-                                <h4 class="text-neon-green font-semibold mb-4 font-mono">// ML/AI Frameworks</h4>
+                                <h4 class="text-neon-green font-semibold mb-4 font-mono">// Analytics Libraries</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
                                         <div class="skill-icon">🤖</div>
@@ -990,10 +1195,10 @@
                                         </div>
                                     </div>
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🧠</div>
+                                        <div class="skill-icon">🧮</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">TensorFlow</span>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="tech-logo">
+                                            <span class="skill-name font-mono">NumPy</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
@@ -1004,17 +1209,17 @@
                                 <h4 class="text-neon-purple font-semibold mb-4 font-mono">// Data Tools</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🐼</div>
+                                        <div class="skill-icon">📊</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Pandas</span>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="tech-logo">
+                                            <span class="skill-name font-mono">Power BI</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI" class="tech-logo">
                                         </div>
                                     </div>
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🚀</div>
+                                        <div class="skill-icon">📈</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Streamlit</span>
-                                            <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit" class="tech-logo">
+                                            <span class="skill-name font-mono">Tableau</span>
+                                            <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" alt="Tableau" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
@@ -1032,9 +1237,9 @@
                         </div>
                         <p class="text-neon-purple mb-3">BluBrick Realty</p>
                         <ul class="space-y-2 text-gray-300 text-sm">
-                            <li>• Increased client handling capacity by 50%</li>
-                            <li>• Led 20% shift in marketing fund allocation</li>
-                            <li>• Optimized agent-client matching process</li>
+                            <li>• Extracted, cleaned, and validated time-sensitive customer and property data from multiple sources</li>
+                            <li>• Built Excel and Power BI reporting workflows that improved reporting efficiency by 30%</li>
+                            <li>• Partnered with cross-functional teams to resolve data discrepancies and support KPI-driven decisions</li>
                         </ul>
                     </div>
 
@@ -1063,14 +1268,14 @@
                 <h2 class="text-4xl font-bold mb-4">
                     <span class="gradient-text">Featured Projects</span>
                 </h2>
-                <p class="text-xl text-gray-300">Real-world applications of data science and machine learning</p>
+                <p class="text-xl text-gray-300">Real-world analytics projects focused on business decisions</p>
                 
                 <!-- Interactive Demo Stats -->
                 <div class="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
                     <div class="card-interactive p-4">
                         <div class="text-2xl font-bold text-neon-blue mb-2">3</div>
-                        <div class="text-sm text-gray-400">Live Demos</div>
-                        <div class="text-xs text-neon-blue mt-1">Interactive Apps</div>
+                        <div class="text-sm text-gray-400">Featured Repos</div>
+                        <div class="text-xs text-neon-blue mt-1">Analytics Portfolio</div>
                     </div>
                     <div class="card-interactive p-4">
                         <div class="text-2xl font-bold text-neon-purple mb-2">∞</div>
@@ -1079,8 +1284,8 @@
                     </div>
                     <div class="card-interactive p-4">
                         <div class="text-2xl font-bold text-neon-green mb-2">Real-time</div>
-                        <div class="text-sm text-gray-400">Predictions</div>
-                        <div class="text-xs text-neon-green mt-1">Live Processing</div>
+                        <div class="text-sm text-gray-400">Business Insights</div>
+                        <div class="text-xs text-neon-green mt-1">Decision Support</div>
                     </div>
                 </div>
             </div>
@@ -1093,39 +1298,43 @@
                     
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                            <span class="text-black font-bold text-xl">🏠</span>
+                            <span class="text-black font-bold text-xl">🛒</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-blue transition-colors">
-                            Real Estate AI Assistant
+                            E-Commerce Sales Analysis Dashboard
                         </h3>
-                        <div class="text-xs text-neon-blue font-mono mt-1">🟢 Live & Interactive</div>
+                        <div class="text-xs text-neon-blue font-mono mt-1">📌 GitHub Featured</div>
                     </div>
                     
-                    <!-- Mini Demo Preview -->
-                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
-                        <div class="text-neon-green mb-1">$ predict_property_value()</div>
-                        <div class="text-gray-400">Location: Mumbai, 2BHK</div>
-                        <div class="text-neon-blue">Predicted: ₹85.2L</div>
-                        <div class="text-neon-purple">Status: Deployed</div>
+                    <!-- Dashboard Preview -->
+                    <div class="bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 rounded-lg p-0 mb-4 border border-neon-blue/20 min-h-32 overflow-hidden">
+                        <img src="assets/images/dashboards/E-commerce Sale Analysis Dashboard.png" alt="E-Commerce Sales Dashboard" class="w-full h-auto object-cover rounded-lg">
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        ML-powered property recommendations with client profiling and predictive analytics. 
-                        <span class="text-neon-blue font-semibold">Try the live demo!</span>
+                        End-to-end analysis of e-commerce performance from 2023-2025, including revenue drivers,
+                        profitability by category, and seasonality trends.
+                        <span class="text-neon-blue font-semibold">Explore the repository.</span>
                     </p>
+
+                    <div class="mb-4 text-xs font-mono text-neon-blue/90 border border-neon-blue/30 rounded-lg px-3 py-2 bg-neon-blue/5">
+                        Impact: 3-year sales dataset analyzed across regions and categories for KPI-ready reporting.
+                    </div>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Streamlit</span>
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Scikit-learn</span>
-                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Pandas</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">EDA</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Dashboarding</span>
                     </div>
                     
                     <div class="mt-auto flex gap-2">
-                        <a href="https://intelligentrealestateassistantgit-007.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
-                            <span class="font-mono">🚀 Live Demo</span>
+                        <a href="https://github.com/VikasDs007/E-Commerce-Sales-Analysis-Dashboard" target="_blank" class="project-btn-primary flex-1 text-center">
+                            <span>📂</span>
+                            <span class="font-semibold">View Project</span>
                         </a>
-                        <a href="https://github.com/VikasDs007/intelligent_real_estate_assistant" target="_blank" class="btn-secondary flex-1 text-center">
-                            <span class="font-mono">{'Code'}</span>
+                        <a href="https://github.com/VikasDs007/E-Commerce-Sales-Analysis-Dashboard" target="_blank" class="project-btn-secondary flex-1 text-center">
+                            <span>💻</span>
+                            <span class="font-semibold">GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -1137,39 +1346,43 @@
                     
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-purple to-neon-green rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                            <span class="text-black font-bold text-xl">🎬</span>
+                            <span class="text-black font-bold text-xl">📉</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-purple transition-colors">
-                            Movie Recommendation System
+                            Telco Customer Churn Analysis
                         </h3>
-                        <div class="text-xs text-neon-purple font-mono mt-1">🟢 Live & Interactive</div>
+                        <div class="text-xs text-neon-purple font-mono mt-1">📌 GitHub Featured</div>
                     </div>
                     
-                    <!-- Mini Demo Preview -->
-                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
-                        <div class="text-neon-green mb-1">$ recommend_movies("Inception")</div>
-                        <div class="text-gray-400">Similar movies found:</div>
-                        <div class="text-neon-purple">• Interstellar (95% match)</div>
-                        <div class="text-neon-blue">• The Matrix (92% match)</div>
+                    <!-- Dashboard Preview -->
+                    <div class="bg-gradient-to-br from-neon-purple/10 to-neon-green/10 rounded-lg p-0 mb-4 border border-neon-purple/20 min-h-32 overflow-hidden">
+                        <img src="assets/images/dashboards/Churn Analysis Dashboard.png" alt="Telco Customer Churn Dashboard" class="w-full h-auto object-cover rounded-lg">
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Content-based recommendation engine using ML algorithms for personalized movie suggestions. 
-                        <span class="text-neon-purple font-semibold">Try it now!</span>
+                        Power BI analysis of churn behavior to identify key drivers and prioritize actionable
+                        retention strategies for business teams.
+                        <span class="text-neon-purple font-semibold">Explore the repository.</span>
                     </p>
+
+                    <div class="mb-4 text-xs font-mono text-neon-purple/90 border border-neon-purple/30 rounded-lg px-3 py-2 bg-neon-purple/5">
+                        Impact: 7,000+ customer records profiled to surface high-risk cohorts and retention levers.
+                    </div>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Content-Based</span>
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">ML Algorithms</span>
-                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Power BI</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Churn Analysis</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">KPI Insights</span>
                     </div>
                     
                     <div class="mt-auto flex gap-2">
-                        <a href="https://content-base-movie-recommendation.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
-                            <span class="font-mono">🚀 Live Demo</span>
+                        <a href="https://github.com/VikasDs007/Telco-Customer-Churn-Analysis" target="_blank" class="project-btn-primary flex-1 text-center">
+                            <span>📂</span>
+                            <span class="font-semibold">View Project</span>
                         </a>
-                        <a href="https://github.com/VikasDs007/Content-Base-Movie-Recommendation" target="_blank" class="btn-secondary flex-1 text-center">
-                            <span class="font-mono">{'Code'}</span>
+                        <a href="https://github.com/VikasDs007/Telco-Customer-Churn-Analysis" target="_blank" class="project-btn-secondary flex-1 text-center">
+                            <span>💻</span>
+                            <span class="font-semibold">GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -1181,41 +1394,54 @@
                     
                     <div class="mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                            <span class="text-black font-bold text-xl">🛡️</span>
+                            <span class="text-black font-bold text-xl">🎯</span>
                         </div>
                         <h3 class="text-xl font-bold text-white group-hover:text-neon-green transition-colors">
-                            AI Insurance Predictor
+                            Campaign Performance ETL Pipeline
                         </h3>
-                        <div class="text-xs text-neon-green font-mono mt-1">🟢 Live & Interactive</div>
+                        <div class="text-xs text-neon-green font-mono mt-1">📌 GitHub Featured</div>
                     </div>
                     
-                    <!-- Mini Demo Preview -->
-                    <div class="bg-black/30 rounded-lg p-3 mb-4 font-mono text-xs">
-                        <div class="text-neon-green mb-1">$ predict_insurance_cost()</div>
-                        <div class="text-gray-400">Age: 30, BMI: 25.5</div>
-                        <div class="text-neon-green">Premium: $4,250/year</div>
-                        <div class="text-neon-blue">Risk Score: Low</div>
+                    <!-- Dashboard Preview -->
+                    <div class="bg-gradient-to-br from-neon-green/10 to-neon-blue/10 rounded-lg p-0 mb-4 border border-neon-green/20 min-h-32 overflow-hidden">
+                        <img src="assets/images/dashboards/Nykaa_Marketing_Campaign_dashboard_1.png" alt="Marketing Campaign ETL Dashboard" class="w-full h-auto object-cover rounded-lg">
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        AI-powered insurance cost prediction using demographic and health factors. 
-                        <span class="text-neon-green font-semibold">Get instant quotes!</span>
+                        End-to-end SQL + Power BI ETL and dashboarding pipeline for campaign analytics,
+                        enabling reusable reporting logic for stakeholder decision-making.
+                        <span class="text-neon-green font-semibold">Explore the repository.</span>
                     </p>
+
+                    <div class="mb-4 text-xs font-mono text-neon-green/90 border border-neon-green/30 rounded-lg px-3 py-2 bg-neon-green/5">
+                        Impact: 55,000+ rows transformed via ETL into funnel, CAC, and ROI decision dashboards.
+                    </div>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">AI Prediction</span>
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Machine Learning</span>
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Streamlit</span>
+                        <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">ETL Pipeline</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">MySQL + Power BI</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">55K+ Rows</span>
                     </div>
                     
                     <div class="mt-auto flex gap-2">
-                        <a href="https://ai-insurance-predictor.streamlit.app/" target="_blank" class="btn-primary flex-1 text-center group-hover:scale-105 transition-transform">
-                            <span class="font-mono">🚀 Live Demo</span>
+                        <a href="https://github.com/VikasDs007/nykaa-marketing-campaign-analytics" target="_blank" class="project-btn-primary flex-1 text-center">
+                            <span>📂</span>
+                            <span class="font-semibold">View Project</span>
                         </a>
-                        <a href="https://github.com/VikasDs007/Medical-Expenses-Prediction" target="_blank" class="btn-secondary flex-1 text-center">
-                            <span class="font-mono">{'Code'}</span>
+                        <a href="https://github.com/VikasDs007/nykaa-marketing-campaign-analytics" target="_blank" class="project-btn-secondary flex-1 text-center">
+                            <span>💻</span>
+                            <span class="font-semibold">GitHub</span>
                         </a>
                     </div>
+                </div>
+
+                <!-- More Projects CTA -->
+                <div class="text-center mt-12 pt-8 border-t border-neon-blue/20">
+                    <p class="text-gray-400 mb-3 text-sm font-mono">Interested in more?</p>
+                    <a href="https://github.com/VikasDs007" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-neon-blue/20 to-neon-purple/20 border border-neon-blue/30 rounded-lg text-neon-blue hover:text-neon-green hover:border-neon-green/50 hover:bg-gradient-to-r hover:from-neon-green/20 hover:to-neon-blue/20 transition-all duration-300 font-semibold">
+                        <span>📂 Explore All Projects on GitHub</span>
+                        <span>→</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1225,10 +1451,10 @@
     <section id="contact" class="py-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">
-                <span class="gradient-text">Let's Build Something Amazing</span>
+                <span class="gradient-text">Let's Connect</span>
             </h2>
             <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Ready to turn your data into actionable insights? Let's discuss your next data science project.
+                Open to Data Analyst and BI opportunities in Mumbai, Navi Mumbai, and Thane, with flexibility for hybrid and remote analytics roles.
             </p>
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-12">
@@ -1274,14 +1500,14 @@
             </div>
 
             <button onclick="toggleContactForm()" class="btn-primary">
-                Start a Project
+                Share an Opportunity
             </button>
 
             <!-- Contact Form Modal -->
             <div id="contactModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
                 <div class="bg-slate-900 rounded-lg neon-border p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                     <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold gradient-text glow-text">Start a Project</h3>
+                        <h3 class="text-2xl font-bold gradient-text glow-text">Share an Opportunity</h3>
                         <button onclick="toggleContactForm()" class="text-gray-400 hover:text-neon-blue text-2xl transition-colors">&times;</button>
                     </div>
 
@@ -1313,67 +1539,67 @@
                             </div>
                         </div>
 
-                        <!-- Project Information -->
+                        <!-- Opportunity Information -->
                         <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Project Type *</label>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Opportunity Type *</label>
                             <select name="project_type" required
                                 class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
-                                <option value="">Select project type</option>
-                                <option value="data-analysis">Data Analysis & Insights</option>
-                                <option value="ml-model">Machine Learning Model</option>
-                                <option value="dashboard">Dashboard & Visualization</option>
-                                <option value="automation">Data Automation</option>
-                                <option value="consulting">Data Strategy Consulting</option>
+                                <option value="">Select opportunity type</option>
+                                <option value="full-time">Full-time Data Analyst Role</option>
+                                <option value="internship">Internship / Trainee Role</option>
+                                <option value="contract">Contract / Freelance Analytics</option>
+                                <option value="referral">Referral / Hiring Discussion</option>
+                                <option value="collaboration">Project Collaboration</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-sm font-semibold text-gray-300 mb-2">Budget Range</label>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Compensation Range</label>
                                 <select name="budget"
                                     class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
-                                    <option value="">Select budget range</option>
-                                    <option value="under-10k">Under ₹10,000</option>
-                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
-                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
-                                    <option value="50k-100k">₹50,000 - ₹1,00,000</option>
-                                    <option value="above-100k">Above ₹1,00,000</option>
+                                    <option value="">Select compensation range</option>
+                                    <option value="lt-4lpa">Below ₹4 LPA</option>
+                                    <option value="4-6lpa">₹4 - ₹6 LPA</option>
+                                    <option value="6-8lpa">₹6 - ₹8 LPA</option>
+                                    <option value="8-12lpa">₹8 - ₹12 LPA</option>
+                                    <option value="12plus">Above ₹12 LPA</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-gray-300 mb-2">Timeline</label>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Hiring Timeline</label>
                                 <select name="timeline"
                                     class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
-                                    <option value="">Select timeline</option>
-                                    <option value="asap">ASAP (Rush Job)</option>
+                                    <option value="">Select hiring timeline</option>
+                                    <option value="asap">Immediate</option>
                                     <option value="1-2weeks">1-2 Weeks</option>
-                                    <option value="1month">1 Month</option>
+                                    <option value="1month">Within 1 Month</option>
                                     <option value="2-3months">2-3 Months</option>
                                     <option value="flexible">Flexible</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Project Description -->
+                        <!-- Role Description -->
                         <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Project Description *</label>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Role / Opportunity Description *</label>
                             <textarea name="project_description" required rows="4"
-                                placeholder="Describe your project goals, challenges, and expected outcomes..."
+                                placeholder="Share role scope, responsibilities, team context, and expected impact..."
                                 class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors resize-vertical"></textarea>
                         </div>
 
-                        <!-- Data Details -->
+                        <!-- Skill Match Details -->
                         <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Data Details</label>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Skill Match Details</label>
                             <textarea name="data_details" rows="3"
-                                placeholder="Tell me about your data: size, format, sources, any specific requirements..."
+                                placeholder="Mention preferred tools (SQL, Power BI, Python, Excel), domain, and location mode (WFO/Hybrid/Remote)..."
                                 class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors resize-vertical"></textarea>
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-4">
                             <button type="submit" class="btn-primary flex-1">
-                                Send Project Details
+                                Send Opportunity Details
                             </button>
                             <button type="button" onclick="toggleContactForm()" class="btn-secondary">
                                 Cancel
@@ -1389,7 +1615,7 @@
     <footer class="py-8 px-6 border-t border-gray-800">
         <div class="max-w-6xl mx-auto text-center">
             <div class="font-mono text-neon-blue mb-4">&lt;/vikas.dev&gt;</div>
-            <p class="text-gray-400 text-sm">© 2024 Vikas Chaurasia. Crafted with data and code.</p>
+            <p class="text-gray-400 text-sm">© 2024 Vikas Chaurasia. Crafted with analytics and code.</p>
         </div>
     </footer>
 
@@ -1611,9 +1837,9 @@
         }
         
         function fallbackToMailto(data) {
-            const subject = encodeURIComponent("Data Science Project Inquiry from " + data.from_name);
+            const subject = encodeURIComponent("Data Analyst Opportunity from " + data.from_name);
             const body = encodeURIComponent(`
-New Project Inquiry:
+New Opportunity Inquiry:
 
 Name: ${data.from_name}
 Email: ${data.from_email}
@@ -1623,10 +1849,10 @@ Project Type: ${data.project_type}
 Budget: ${data.budget}
 Timeline: ${data.timeline}
 
-Project Description:
+Role / Opportunity Description:
 ${data.message}
 
-Data Details:
+Skill Match Details:
 ${data.data_details}
             `);
             
@@ -1653,7 +1879,7 @@ ${data.data_details}
             }, 5000);
         }
 
-        // Enhanced Data Science Skills Animation
+        // Enhanced Analytics Skills Animation
         function initSkillsAnimation() {
             const skillItems = document.querySelectorAll('.skill-item');
             
@@ -1681,7 +1907,7 @@ ${data.data_details}
             });
         }
 
-        // Enhanced Data Science Stats Animation
+        // Enhanced Analytics Stats Animation
         function animateDataScienceStats() {
             const statCards = document.querySelectorAll('.code-bg');
             
@@ -1811,7 +2037,7 @@ ${data.data_details}
             // Track resume downloads
             document.querySelectorAll('a[download]').forEach(link => {
                 link.addEventListener('click', () => {
-                    trackEvent('download', 'resume', 'vikas_resume_datascientist.pdf');
+                    trackEvent('download', 'resume', 'vikas_chaurasia_data_analyst.pdf');
                 });
             });
         }

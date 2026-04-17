@@ -1,7 +1,7 @@
 {
-  "name": "Vikas Chaurasia - Data Scientist Portfolio",
+  "name": "Vikas Chaurasia - Data Analyst Portfolio",
   "short_name": "Vikas Portfolio",
-  "description": "Interactive portfolio showcasing data science projects with live demos",
+  "description": "Interactive portfolio showcasing data analytics projects, dashboards, and business insights",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0F0F23",
@@ -19,7 +19,7 @@
       "type": "image/svg+xml"
     }
   ],
-  "categories": ["portfolio", "data-science", "professional"],
+  "categories": ["portfolio", "data-analytics", "business-intelligence", "professional"],
   "lang": "en",
   "dir": "ltr"
 }
