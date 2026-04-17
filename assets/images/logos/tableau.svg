@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tableau logo">
+  <g fill="#E97627">
+    <rect x="30" y="8" width="4" height="14"/>
+    <rect x="25" y="13" width="14" height="4"/>
+    <rect x="30" y="42" width="4" height="14"/>
+    <rect x="25" y="47" width="14" height="4"/>
+    <rect x="8" y="30" width="14" height="4"/>
+    <rect x="13" y="25" width="4" height="14"/>
+    <rect x="42" y="30" width="14" height="4"/>
+    <rect x="47" y="25" width="4" height="14"/>
+    <rect x="30" y="28" width="4" height="8"/>
+    <rect x="28" y="30" width="8" height="4"/>
+  </g>
+  <g fill="#1F4E79" opacity="0.9">
+    <rect x="18" y="18" width="4" height="10"/>
+    <rect x="15" y="21" width="10" height="4"/>
+    <rect x="42" y="18" width="4" height="10"/>
+    <rect x="39" y="21" width="10" height="4"/>
+    <rect x="18" y="36" width="4" height="10"/>
+    <rect x="15" y="39" width="10" height="4"/>
+    <rect x="42" y="36" width="4" height="10"/>
+    <rect x="39" y="39" width="10" height="4"/>
+  </g>
+</svg>
