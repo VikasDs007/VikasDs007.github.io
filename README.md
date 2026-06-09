@@ -1,4 +1,4 @@
-# Vikas Chaurasia - Data Analyst Portfolio 📊
+# Vikas Chaurasia - AI/ML Engineer & GenAI Developer Portfolio 🤖
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-00D4FF?style=flat-square)](https://vikasds007.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=flat-square)](https://www.linkedin.com/in/vikasds007/)
@@ -48,11 +48,11 @@ git push origin main
 
 ## 🎯 About
 
-Welcome to my **Data Analyst Portfolio**! I specialize in transforming raw data into actionable business insights through SQL, Power BI, Python analytics, and ETL pipelines. This repository hosts my live portfolio website showcasing featured projects, skills, and impact metrics.
+Welcome to my **AI/ML & GenAI Portfolio**! I specialize in building RAG pipelines, multi-agent systems, and production machine learning applications to solve complex business problems. This repository hosts my live portfolio website showcasing featured projects, skills, and impact metrics.
 
 **Experience Level:** Fresher-Mid (1.3+ years)  
 **Location:** Mumbai, Navi Mumbai, Thane | Open to Remote/Hybrid  
-**Key Focus:** Data Analysis, Business Intelligence, ETL, KPI Reporting
+**Key Focus:** RAG Pipelines, Multi-agent Systems, LLM Orchestration, Production MLOps, Data Science
 
 ---
 
@@ -81,21 +81,18 @@ Welcome to my **Data Analyst Portfolio**! I specialize in transforming raw data 
 
 ## 🛠️ Tech Stack
 
-**Data & Analytics:**
-- **SQL** - Complex queries, ETL pipelines, database optimization
-- **Python** - Pandas, NumPy, Matplotlib, data cleaning & EDA
-- **Power BI / Tableau** - Dashboard design, KPI tracking, stakeholder reporting
-- **Excel** - Advanced functions, pivot tables, data visualization
+**AI/ML & GenAI:**
+- **GenAI & Orchestration** - RAG pipelines, multi-agent systems (LangChain, LangGraph, LlamaIndex), LLMs (Llama, GPT, Claude), Groq, Ollama
+- **Machine Learning** - Scikit-learn, Pandas, NumPy, regression, classification, clustering, hyperparameter tuning
+- **APIs & Deployment** - FastAPI, Streamlit, Docker, MLOps cycles
 
-**Tools & Platforms:**
-- MySQL, PostgreSQL
-- Google Analytics
-- Jupyter Notebooks
-- Git / GitHub
+**Data & Analytics:**
+- **SQL** - Complex queries, ETL pipelines, database optimization (PostgreSQL, MySQL)
+- **Power BI / Tableau** - Dashboard design, KPI tracking, stakeholder reporting
 
 **Soft Skills:**
-- Stakeholder communication
-- Data governance & documentation
+- System design & architecture
+- Stakeholder communication & documentation
 - Business impact articulation
 - Problem-solving & data-driven decision making
 
@@ -232,7 +229,7 @@ This portfolio demonstrates:
 - **Technical Growth:** Continuous learning in data tools & methodologies
 - **Attention to Detail:** Portfolio optimization for discovery & user experience
 
-**Looking for:** Data Analyst | BI Analyst | Data Engineer roles in Mumbai/Navi Mumbai/Thane region (or remote with competitive compensation)
+**Looking for:** AI/ML Engineer | GenAI Developer | Data Scientist roles in Mumbai/Navi Mumbai/Thane region (or remote with competitive compensation)
 
 ---
 

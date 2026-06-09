@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Vikas Chaurasia - Data Analyst specializing in SQL, Power BI, Python, ETL pipelines, KPI reporting, data governance, and stakeholder-focused analytics. MSc in Data Science & Business Analytics.">
-    <meta name="keywords" content="Data Analyst, Business Intelligence, SQL, Power BI, Tableau, Python, ETL, Data Governance, KPI Reporting, Stakeholder Reporting, Exploratory Data Analysis, Mumbai, India">
+<meta name="description" content="Vikas Chaurasia — AI/ML Engineer and GenAI Developer building RAG pipelines, multi-agent systems, and production ML applications. M.Sc. Data Science, Mumbai.">
+    <meta name="keywords" content="AI ML Engineer, GenAI Developer, RAG Pipeline, LangChain, LangGraph, LLM, Machine Learning, Python, FastAPI, Ollama, Llama 3, Data Scientist, Mumbai, India">
     <meta name="author" content="Vikas Chaurasia">
-    <title>Vikas Chaurasia | Data Analyst</title>
+    <title>Vikas Chaurasia | AI/ML Engineer & GenAI Developer</title>
     
     <!-- SEO & Social Media Meta Tags -->
-    <meta property="og:title" content="Vikas Chaurasia - Data Analyst">
-    <meta property="og:description" content="Interactive portfolio showcasing ETL workflows, KPI dashboards, and stakeholder-focused data analytics projects using SQL, Power BI, Tableau, and Python.">
+    <meta property="og:title" content="Vikas Chaurasia | AI/ML Engineer & GenAI Developer">
+    <meta property="og:description" content="Building RAG systems, multi-agent pipelines, and production ML applications for real business problems.">
+
     <meta property="og:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
     <meta property="og:url" content="https://vikasds007.github.io">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vikas Chaurasia - Data Analyst">
-    <meta name="twitter:description" content="Portfolio with ETL workflows, KPI dashboards, and business-focused data analytics outcomes">
+    <meta name="twitter:title" content="Vikas Chaurasia | AI/ML Engineer & GenAI Developer">
+    <meta name="twitter:description" content="Building RAG systems, multi-agent pipelines, and production ML applications for real business problems.">
     <meta name="twitter:image" content="https://vikasds007.github.io/portfolio-preview.jpg">
     
     <!-- Structured Data - Schema.org JSON-LD -->
@@ -27,8 +28,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Vikas Chaurasia",
-      "jobTitle": "Data Analyst",
-    "image": "https://vikasds007.github.io/assets/images/Vikas.png",
+      "jobTitle": "AI/ML Engineer & GenAI Developer",
+      "image": "https://vikasds007.github.io/assets/images/Vikas.png",
       "url": "https://vikasds007.github.io",
       "sameAs": [
         "https://www.linkedin.com/in/vikasds007/",
@@ -40,16 +41,16 @@
         "url": "https://vikasds007.github.io/#contact"
       },
       "knowsAbout": [
-        "Data Analysis",
-        "SQL",
-        "Python",
-        "Power BI",
-        "Tableau",
-        "ETL Pipelines",
-        "Data Governance",
-        "KPI Reporting",
-        "Business Intelligence",
-        "Exploratory Data Analysis"
+        "GenAI",
+        "RAG pipelines",
+        "Multi-agent systems",
+        "LangChain",
+        "LangGraph",
+        "LLM",
+        "FastAPI",
+        "Docker",
+        "Machine Learning",
+        "NLP"
       ],
       "educationCredential": {
         "@type": "EducationalOccupationalCredential",
@@ -63,8 +64,9 @@
     {
       "@context": "https://schema.org",
       "@type": "CreativeWork",
-      "name": "Data Analyst Portfolio",
-      "description": "Interactive portfolio showcasing ETL workflows, KPI dashboards, and stakeholder-focused data analytics projects",
+      "name": "AI/ML Engineering Portfolio",
+      "description": "Interactive portfolio showcasing RAG pipelines, multi-agent systems, and production AI/ML deployments",
+
       "creator": {
         "@type": "Person",
         "name": "Vikas Chaurasia"
@@ -471,15 +473,35 @@
         }
 
         .card-blue:hover {
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.4) !important;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 212, 255, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .card-purple:hover {
-            box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.4) !important;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(139, 92, 246, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
         .card-green:hover {
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+            border-color: rgba(0, 255, 136, 0.4) !important;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(0, 255, 136, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Icon hover rotation & scaling */
+        .card-interactive svg {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-interactive:hover svg {
+            transform: scale(1.15) rotate(5deg);
         }
 
         /* === SKILL ITEMS === */
@@ -930,6 +952,195 @@
                 transform: none;
             }
         }
+        /* === RESUME AI CHATBOT WIDGET === */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4), 0 0 15px rgba(0, 212, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .chatbot-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6), 0 0 25px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Adjust back-to-top position to not overlap chatbot */
+        .back-to-top {
+            right: 6.5rem !important;
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 6.5rem;
+            right: 2rem;
+            width: 24rem;
+            max-width: calc(100vw - 4rem);
+            height: 28rem;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+            transform: translateY(20px) scale(0.95);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .chat-container.open {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .chat-header {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1.25rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .chat-msg {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .chat-msg.user {
+            background: rgba(0, 212, 255, 0.15);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.25rem;
+        }
+
+        .chat-msg.agent {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            align-self: flex-start;
+            border-bottom-left-radius: 0.25rem;
+        }
+
+        .chat-chips-container {
+            padding: 0 1.25rem 0.5rem 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .chat-chip {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            color: #00D4FF;
+            padding: 0.35rem 0.7rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .chat-chip:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .chat-input-area {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(10, 15, 30, 0.5);
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.75rem;
+            padding: 0.5rem 0.85rem;
+            color: #fff;
+            font-size: 0.85rem;
+            transition: border-color 0.25s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .chat-send-btn {
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            color: #000;
+            font-weight: 600;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.25s ease;
+        }
+
+        .chat-send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Pulsing indicator */
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 4px 0;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
+        }
     </style>
 </head>
 
@@ -966,7 +1177,13 @@
                         class="hover:text-neon-green transition-colors">
                         GitHub
                     </a>
-                    <a href="assets/docs/Vikas_Chaurasia_Data_Analyst.pdf" download
+                    <button onclick="toggleParticles()" id="particleToggleBtn" 
+                        class="text-xs font-mono text-neon-blue px-2.5 py-1.5 rounded-lg border border-neon-blue/20 bg-neon-blue/5 hover:bg-neon-blue/20 hover:border-neon-blue/40 transition-all flex items-center gap-1"
+                        title="Toggle background particle animation to save CPU/battery">
+                        <span>✨</span>
+                        <span id="particleToggleTxt">Particles On</span>
+                    </button>
+                    <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download
                         class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all border border-neon-blue/30">
                         Resume
                     </a>
@@ -993,7 +1210,12 @@
                             class="hover:text-neon-green transition-colors" onclick="closeMobileMenu()">
                             GitHub
                         </a>
-                        <a href="assets/docs/Vikas_Chaurasia_Data_Analyst.pdf" download
+                        <button onclick="toggleParticles(); closeMobileMenu();" id="particleToggleBtnMobile" 
+                            class="text-xs font-mono text-neon-blue px-2.5 py-2.5 rounded-lg border border-neon-blue/20 bg-neon-blue/5 hover:bg-neon-blue/20 hover:border-neon-blue/40 transition-all flex items-center justify-center gap-1">
+                            <span>✨</span>
+                            <span id="particleToggleTxtMobile">Particles On</span>
+                        </button>
+                        <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download
                             class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold text-center border border-neon-blue/30">
                             Resume
                         </a>
@@ -1021,15 +1243,15 @@
                             <span class="text-white">Chaurasia</span>
                         </h1>
                         <div class="font-mono text-xl text-gray-300 typing">
-                            Data Analyst | AI-Powered Analytics & ML Deployment
+                            AI/ML Engineer · GenAI Application Developer
                         </div>
                     </div>
 
                     <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-                        Turning complex data into business intelligence using
-                        <span class="text-neon-blue font-semibold">SQL</span>,
-                        <span class="text-neon-purple font-semibold">Power BI / Tableau</span>, and
-                        <span class="text-neon-green font-semibold">Python (Pandas, NumPy)</span>
+Building end-to-end AI systems —
+                        <span class="text-neon-blue font-semibold">RAG pipelines</span>,
+                        <span class="text-neon-purple font-semibold">LangGraph multi-agent orchestration</span>,
+                        and <span class="text-neon-green font-semibold">production ML APIs</span> that solve real business problems.
                     </p>
 
                     <div class="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -1069,15 +1291,15 @@
                         <div class="card-interactive card-purple p-5 md:p-6 flex items-center gap-4 min-h-[120px] text-left">
                             <div class="w-14 h-14 rounded-xl bg-neon-purple/15 border border-neon-purple/30 flex items-center justify-center text-2xl shrink-0">📊</div>
                             <div class="min-w-0">
-                                <div class="text-2xl md:text-3xl font-bold text-neon-purple glow-text leading-none">BI</div>
-                                <div class="text-sm md:text-base text-gray-300 mt-1 leading-tight">Dashboarding &amp; Reporting</div>
+                                <div class="text-2xl md:text-3xl font-bold text-neon-purple glow-text leading-none">GenAI</div>
+                                <div class="text-sm md:text-base text-gray-300 mt-1 leading-tight">RAG · Agents · Deployments</div>
                             </div>
                         </div>
                         <div class="card-interactive card-green p-5 md:p-6 flex items-center gap-4 min-h-[120px] text-left">
                             <div class="w-14 h-14 rounded-xl bg-neon-green/15 border border-neon-green/30 flex items-center justify-center text-2xl shrink-0">🗃️</div>
                             <div class="min-w-0">
-                                <div class="text-2xl md:text-3xl font-bold text-neon-green glow-text leading-none">SQL</div>
-                                <div class="text-sm md:text-base text-gray-300 mt-1 leading-tight">Querying &amp; KPI Analysis</div>
+                                <div class="text-2xl md:text-3xl font-bold text-neon-green glow-text leading-none">Python</div>
+                                <div class="text-sm md:text-base text-gray-300 mt-1 leading-tight">RAG · ML Pipelines · APIs</div>
                             </div>
                         </div>
                     </div>
@@ -1093,14 +1315,14 @@
                             <span class="text-gray-400 ml-4">terminal</span>
                         </div>
                         <div class="space-y-2">
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import pandas as pd</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import pandas as pd</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">import sqlite3</span></div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">SELECT channel, SUM(revenue) FROM sales GROUP BY channel;</span></div>
-                            <div class="text-neon-blue">Insight found: Paid Search drives highest ROI ✓</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">build_kpi_dashboard(data)</span></div>
-                            <div class="text-neon-purple">Status: Stakeholder-ready report</div>
-                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">publish dashboard to Power BI</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">from langchain.vectorstores import Chroma</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">llm = Ollama(model="llama3.1:8b")</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">agent = LangGraph.compile(workflow)</span></div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">rag_chain.invoke({"query": user_input})</span></div>
+                            <div class="text-neon-blue">Status: RAG pipeline deployed ✓</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300">docker build -t ml-api .</span></div>
+                            <div class="text-neon-purple">Status: API live on port 8000 ✓</div>
+                            <div><span class="text-neon-green">$</span> <span class="text-gray-300 typing">fastapi run ml-api --host 0.0.0.0 --port 8000</span></div>
                         </div>
                     </div>
                 </div>
@@ -1120,7 +1342,7 @@
                 <div class="mb-12">
                     <div class="relative inline-block">
                         <div class="w-48 h-48 mx-auto rounded-full overflow-hidden neon-border p-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-green">
-                               <img src="assets/images/Vikas.png" alt="Vikas Chaurasia - Data Analyst" 
+                               <img src="assets/images/Vikas.png" alt="Vikas Chaurasia - AI/ML Engineer & GenAI Developer" 
                                  class="w-full h-full object-cover rounded-full bg-gray-800"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="w-full h-full rounded-full bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 flex items-center justify-center text-6xl" style="display: none;">
@@ -1132,41 +1354,40 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold text-white mt-4 mb-2">Vikas Chaurasia</h3>
-                    <p class="text-gray-400 text-sm font-mono">Data Analyst | AI-Powered Analytics & ML Deployment</p>
+                    <p class="text-gray-400 text-sm font-mono">AI/ML Engineer · GenAI Application Developer</p>
                 </div>
                 
                 <div class="max-w-4xl mx-auto space-y-8">
                     <!-- Main Story -->
                     <div class="space-y-6">
                         <p class="text-xl text-gray-300 leading-relaxed">
-                            From <span class="text-neon-blue font-semibold">Analyst, Operations</span> to <span class="text-neon-purple font-semibold">Data Analyst</span> —
-                            my journey is focused on turning operational and customer data into decisions teams can act on.
+                            I design, build, and deploy GenAI systems that turn domain knowledge into reliable, production-ready decision support.
                         </p>
                         <p class="text-lg text-gray-400 leading-relaxed">
                             With an <span class="text-neon-green font-semibold">MSc in Data Science & Business Analytics</span>,
-                            I combine SQL, Python, ETL workflows, and BI reporting to deliver clean datasets, reliable KPI tracking,
-                            and actionable stakeholder reporting for measurable outcomes.
+                            I combine SQL, Python, ETL workflows, and business-facing analytics to design reliable data products,
+                            and ship GenAI + ML systems that deliver measurable outcomes.
                         </p>
                     </div>
 
                     <!-- Analytics Workflow -->
                     <div class="grid md:grid-cols-3 gap-6 py-8">
                         <div class="text-center card-interactive p-6">
-                            <div class="text-4xl mb-2">📊</div>
-                            <div class="text-xl font-bold text-neon-blue mb-2">Analyze</div>
-                            <div class="text-sm text-gray-400">Data Exploration</div>
+                            <div class="text-4xl mb-2">🧠</div>
+                            <div class="text-xl font-bold text-neon-blue mb-2">Design</div>
+                            <div class="text-sm text-gray-400">AI Architecture</div>
                             <div class="text-xs text-neon-blue mt-1">Phase 1</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-4xl mb-2">📈</div>
-                            <div class="text-xl font-bold text-neon-purple mb-2">Visualize</div>
-                            <div class="text-sm text-gray-400">KPI Dashboards</div>
+                            <div class="text-4xl mb-2">🔧</div>
+                            <div class="text-xl font-bold text-neon-purple mb-2">Build</div>
+                            <div class="text-sm text-gray-400">End-to-End Systems</div>
                             <div class="text-xs text-neon-purple mt-1">Phase 2</div>
                         </div>
                         <div class="text-center card-interactive p-6">
-                            <div class="text-4xl mb-2">✅</div>
-                            <div class="text-xl font-bold text-neon-green mb-2">Recommend</div>
-                            <div class="text-sm text-gray-400">Business Actions</div>
+                            <div class="text-4xl mb-2">🚀</div>
+                            <div class="text-xl font-bold text-neon-green mb-2">Deploy</div>
+                            <div class="text-sm text-gray-400">Production APIs</div>
                             <div class="text-xs text-neon-green mt-1">Phase 3</div>
                         </div>
                     </div>
@@ -1178,19 +1399,19 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">▶</span>
-                                    <span>Executive dashboards with trackable KPI definitions</span>
+                                    <span>RAG pipelines that retrieve and reason over domain-specific documents</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">▶</span>
-                                    <span>SQL analysis to uncover growth, churn, and funnel leaks</span>
+                                    <span>Multi-agent systems with LangGraph for complex, multi-step business workflows</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-purple">▶</span>
-                                    <span>ETL-ready datasets with strong QA and data governance</span>
+                                    <span>Production ML APIs (FastAPI + Docker) with experiment tracking via MLflow</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">▶</span>
-                                    <span>Data stories that drive stakeholder decisions</span>
+                                    <span>GenAI applications that non-technical stakeholders can actually use</span>
                                 </li>
                             </ul>
                         </div>
@@ -1199,19 +1420,19 @@
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">🧠</span>
-                                    <span>Frame every analysis around business questions first</span>
+                                    <span>Start from the business problem — then pick the right model/architecture</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-green">⚡</span>
-                                    <span>Build accurate dashboards and KPI reports stakeholders trust</span>
+                                    <span>Build for production from day one — not just a working notebook</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-purple">📊</span>
-                                    <span>Tell clear stories with metrics, trends, and context</span>
+                                    <span>Evaluate rigorously — calibration, drift monitoring, benchmark metrics</span>
                                 </li>
                                 <li class="flex items-center gap-3">
                                     <span class="text-neon-blue">🚀</span>
-                                    <span>Collaborate cross-functionally under tight business timelines</span>
+                                    <span>Ship it — live deployments, not just GitHub repos</span>
                                 </li>
                             </ul>
                         </div>
@@ -1220,7 +1441,7 @@
                     <!-- Call to Action -->
                     <div class="text-center pt-8">
                         <p class="text-lg text-gray-400 mb-6">
-                            Looking for a data analyst who turns numbers into action?
+                            Looking for an AI/ML Engineer who ships production systems?
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="#projects" class="btn-primary">
@@ -1238,114 +1459,122 @@
                 <!-- Technical Skills -->
                 <div class="card-3d skill-card-3d code-bg rounded-lg p-8 neon-border">
                     <div class="card-inner">
-                        <h3 class="text-2xl font-bold mb-6 gradient-text">Analytics Toolkit</h3>
+                        <h3 class="text-2xl font-bold mb-6 gradient-text">AI & ML Engineering Stack</h3>
                         <div class="space-y-6">
-                            <!-- Core Technologies -->
+                            <!-- GenAI & Orchestration -->
                             <div class="skill-category">
-                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// Core Technologies</h4>
+                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// GenAI & Orchestration</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🐍</div>
+                                        <div class="skill-icon">🔗</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Python</span>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo">
+                                            <span class="skill-name font-mono text-xs md:text-sm">LangChain</span>
                                         </div>
                                     </div>
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🗃️</div>
+                                        <div class="skill-icon">🕸️</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">SQL</span>
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" class="tech-logo">
+                                            <span class="skill-name font-mono text-xs md:text-sm">LangGraph</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🤗</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono text-xs md:text-sm">Hugging Face</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">⚡</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono text-xs md:text-sm">Groq / Ollama</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-badge col-span-2">
+                                        <div class="skill-icon">🤖</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono text-xs md:text-sm">LLMs (Llama 3, GPT-4)</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Analytics Libraries -->
+                            <!-- Machine Learning & APIs -->
                             <div class="skill-category">
-                                <h4 class="text-neon-green font-semibold mb-4 font-mono">// Analytics Libraries</h4>
+                                <h4 class="text-neon-green font-semibold mb-4 font-mono">// Machine Learning & APIs</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
                                         <div class="skill-icon">🤖</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Scikit-learn</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">Scikit-learn</span>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn" class="tech-logo">
+                                        </div>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🔥</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono text-xs md:text-sm">FastAPI</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="tech-logo" onerror="this.style.display='none';">
+                                        </div>
+                                    </div>
+                                    <div class="skill-badge">
+                                        <div class="skill-icon">🐳</div>
+                                        <div class="skill-info">
+                                            <span class="skill-name font-mono text-xs md:text-sm">Docker</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="tech-logo">
                                         </div>
                                     </div>
                                     <div class="skill-badge">
                                         <div class="skill-icon">🧮</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">NumPy</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">NumPy / Pandas</span>
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="tech-logo">
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- AI & NLP -->
+                            <!-- Data & Query Stack -->
                             <div class="skill-category">
-                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// AI & NLP Stack</h4>
+                                <h4 class="text-neon-blue font-semibold mb-4 font-mono">// Data & Query Stack</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
-                                        <div class="skill-icon">🧩</div>
+                                        <div class="skill-icon">🐍</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">spaCy</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">Python</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-logo">
                                         </div>
                                     </div>
                                     <div class="skill-badge">
-                                        <div class="skill-icon">📚</div>
+                                        <div class="skill-icon">🗃️</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">NLTK</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">SQL / Postgres</span>
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-logo">
                                         </div>
                                     </div>
-                                    <div class="skill-badge">
-                                        <div class="skill-icon">🤗</div>
+                                    <div class="skill-badge col-span-2">
+                                        <div class="skill-icon">📐</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Hugging Face</span>
-                                        </div>
-                                    </div>
-                                    <div class="skill-badge">
-                                        <div class="skill-icon">🔗</div>
-                                        <div class="skill-info">
-                                            <span class="skill-name font-mono">LangChain</span>
-                                        </div>
-                                    </div>
-                                    <div class="skill-badge">
-                                        <div class="skill-icon">💓</div>
-                                        <div class="skill-info">
-                                            <span class="skill-name font-mono">VADER</span>
-                                        </div>
-                                    </div>
-                                    <div class="skill-badge">
-                                        <div class="skill-icon">⚡</div>
-                                        <div class="skill-info">
-                                            <span class="skill-name font-mono">Groq</span>
-                                        </div>
-                                    </div>
-                                    <div class="skill-badge">
-                                        <div class="skill-icon">🤖</div>
-                                        <div class="skill-info">
-                                            <span class="skill-name font-mono">Llama 3</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">Vector DBs (Chroma/Pinecone)</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Data Tools -->
+                            <!-- Business Analytics -->
                             <div class="skill-category">
-                                <h4 class="text-neon-purple font-semibold mb-4 font-mono">// Data Tools</h4>
+                                <h4 class="text-neon-purple font-semibold mb-4 font-mono">// Business Analytics</h4>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div class="skill-badge">
                                         <div class="skill-icon">📊</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Power BI</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">Power BI</span>
                                             <img src="assets/images/logos/powerbi.svg" alt="Power BI" class="tech-logo">
                                         </div>
                                     </div>
                                     <div class="skill-badge">
                                         <div class="skill-icon">📈</div>
                                         <div class="skill-info">
-                                            <span class="skill-name font-mono">Tableau</span>
+                                            <span class="skill-name font-mono text-xs md:text-sm">Tableau</span>
                                             <img src="assets/images/logos/tableau.svg" alt="Tableau" class="tech-logo">
                                         </div>
                                     </div>
@@ -1395,14 +1624,14 @@
                 <h2 class="text-4xl font-bold mb-4">
                     <span class="section-accent-green">Featured Projects</span>
                 </h2>
-                <p class="text-xl text-gray-300">Real-world analytics projects focused on business decisions</p>
+                <p class="text-xl text-gray-300">GenAI and production ML systems built for real business outcomes</p>
                 
                 <!-- Interactive Demo Stats -->
                 <div class="grid md:grid-cols-3 gap-6 mt-8 max-w-4xl mx-auto">
                     <div class="card-interactive p-4">
-                        <div class="text-2xl font-bold text-neon-blue mb-2">3</div>
+                        <div class="text-2xl font-bold text-neon-blue mb-2">5</div>
                         <div class="text-sm text-gray-400">Featured Repos</div>
-                        <div class="text-xs text-neon-blue mt-1">Analytics Portfolio</div>
+                        <div class="text-xs text-neon-blue mt-1">AI & Analytics Portfolio</div>
                     </div>
                     <div class="card-interactive p-4">
                         <div class="text-2xl font-bold text-neon-purple mb-2">∞</div>
@@ -1439,13 +1668,87 @@
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        End-to-end ML pipeline comparing 4 models (Gradient Boosting, Random Forest, SVR, Linear Regression)
-                        to predict medical insurance costs with R² = 0.884. Deployed as a live interactive Streamlit web
-                        application with real-time predictions and actionable cost-reduction recommendations.
+                        End-to-end ML pipeline with systematic model selection across 4 algorithms
+                        (Gradient Boosting, Random Forest, SVR, Linear Regression), feature engineering,
+                        and hyperparameter tuning — achieving R² = 0.884.
+                        Deployed as a live FastAPI-backed Streamlit application with real-time inference
+                        and business recommendations. Demonstrates full MLOps cycle: train → evaluate → deploy.
                     </p>
 
                     <div class="mb-4 text-xs font-mono text-neon-blue/90 border border-neon-blue/30 rounded-lg px-3 py-2 bg-neon-blue/5">
-                        Impact: 4 ML models evaluated · R² = 0.884 · Live Streamlit deployment
+                        Impact: 4 models · R² = 0.884 · Train → evaluate → deploy
+                    </div>
+
+                    <!-- Toggle Live Inference Button -->
+                    <button onclick="toggleInferenceWidget()" class="project-btn-primary w-full mb-4 text-center select-none font-semibold text-xs md:text-sm">
+                        <span>⚡</span>
+                        <span>Try Live Inference Calculator</span>
+                    </button>
+                    
+                    <!-- Inference Widget Container (Hidden by Default) -->
+                    <div id="inferenceWidget" class="hidden bg-slate-900/90 border border-neon-blue/30 rounded-lg p-4 mb-4 space-y-3 text-left">
+                        <h4 class="text-neon-blue font-bold text-sm font-mono">// Predict Medical Premium (INR)</h4>
+                        
+                        <!-- Age Input -->
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                <span>Age:</span>
+                                <span id="valAge" class="font-mono text-neon-blue">30</span>
+                            </div>
+                            <input type="range" id="inpAge" min="18" max="85" value="30" oninput="runInsuranceInference()"
+                                class="w-full h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-neon-blue">
+                        </div>
+
+                        <!-- BMI Input -->
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                <span>BMI (Body Mass Index):</span>
+                                <span id="valBmi" class="font-mono text-neon-blue">25.0</span>
+                            </div>
+                            <input type="range" id="inpBmi" min="15" max="50" step="0.5" value="25.0" oninput="runInsuranceInference()"
+                                class="w-full h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-neon-blue">
+                        </div>
+
+                        <!-- Children Input -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs text-gray-400 mb-1">Children:</label>
+                                <select id="inpChildren" onchange="runInsuranceInference()"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-neon-blue">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-400 mb-1">Region:</label>
+                                <select id="inpRegion" onchange="runInsuranceInference()"
+                                    class="w-full bg-slate-800 border border-gray-600 rounded px-2 py-1 text-xs text-white focus:outline-none focus:border-neon-blue">
+                                    <option value="southwest">Southwest</option>
+                                    <option value="southeast">Southeast</option>
+                                    <option value="northwest">Northwest</option>
+                                    <option value="northeast">Northeast</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Smoker Input -->
+                        <div class="flex items-center justify-between py-1">
+                            <span class="text-xs text-gray-400">Smoker status:</span>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="inpSmoker" onchange="runInsuranceInference()" class="sr-only peer">
+                                <div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-neon-blue"></div>
+                            </label>
+                        </div>
+
+                        <!-- Prediction Output Display -->
+                        <div class="border-t border-neon-blue/20 pt-2 flex justify-between items-center">
+                            <span class="text-xs font-mono text-neon-green">Inference Output:</span>
+                            <span id="predictedCharges" class="font-bold text-neon-green text-sm font-mono">₹12,450.00</span>
+                        </div>
                     </div>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -1496,21 +1799,21 @@
                     </div>
                     
                     <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                        Real-time market intelligence dashboard analyzing Global and Indian financial news using NLP sentiment
-                        analysis. Features a dual-source pipeline (NewsAPI + NewsData.io), VADER sentiment scoring across 5
-                        sectors, and an LLM-powered AI Analyst (Llama 3 via Groq) that answers plain English questions backed
-                        by actual headlines.
+                        Production GenAI system with a dual-source news ingestion pipeline (NewsAPI + NewsData.io),
+                        VADER + transformer-based sentiment scoring across 5 market sectors, and a LangChain-orchestrated
+                        AI Analyst agent (Llama 3 via Groq) that answers natural language queries backed by live headlines.
+                        Processes 98+ articles daily with sub-second inference.
                     </p>
 
                     <div class="mb-4 text-xs font-mono text-neon-blue/90 border border-neon-blue/30 rounded-lg px-3 py-2 bg-neon-blue/5">
-                        Impact: 98+ headlines analyzed daily · Global + 🇮🇳 India markets · Powered by Llama 3 AI
+                        Impact: 98+ articles daily · Dual-source ingestion · Live headline Q&amp;A
                     </div>
                     
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">NLP</span>
-                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">Streamlit</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">GenAI</span>
+                        <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">NLP</span>
                         <span class="px-2 py-1 bg-neon-green/20 text-neon-green rounded text-xs">Groq</span>
-                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">Python</span>
+                        <span class="px-2 py-1 bg-neon-blue/20 text-neon-blue rounded text-xs">LangChain</span>
                         <span class="px-2 py-1 bg-neon-purple/20 text-neon-purple rounded text-xs">NewsAPI</span>
                     </div>
                     
@@ -1693,48 +1996,57 @@
                 <span class="section-accent-blue">Let's Connect</span>
             </h2>
             <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-                Open to Data Analyst and BI opportunities in Mumbai, Navi Mumbai, and Thane, with flexibility for hybrid and remote analytics roles.
+                Open to AI/ML Engineer, GenAI Developer, and Data Scientist roles — Mumbai, Navi Mumbai, Thane, and remote.
             </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-12">
-                <div class="card-interactive card-blue">
-                    <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <span class="text-neon-blue text-xl">📧</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 max-w-3xl mx-auto">
+                <div class="card-interactive card-blue h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-neon-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Email</h3>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Email</h3>
-                    <p class="text-gray-300 text-xs break-all">vikasjchaurasia<br class="hidden md:block">@gmail.com</p>
+                    <p class="text-gray-300 text-xs break-all mt-auto">vikasjchaurasia<br class="hidden md:block">@gmail.com</p>
                 </div>
 
-                <div class="card-interactive card-purple">
-                    <div class="w-12 h-12 bg-neon-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <span class="text-neon-purple text-xl">📱</span>
+                <div class="card-interactive card-green h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-neon-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Location</h3>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Phone</h3>
-                    <p class="text-gray-300 text-sm">+91 9987056798</p>
+                    <p class="text-gray-300 text-sm mt-auto">Mumbai, India</p>
                 </div>
 
-                <div class="card-interactive card-green">
-                    <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <span class="text-neon-green text-xl">📍</span>
+                <a href="https://www.linkedin.com/in/vikasds007/" target="_blank" class="card-interactive card-blue group h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-blue/30 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-neon-blue" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-white mb-2 group-hover:text-neon-blue transition-colors">LinkedIn</h3>
                     </div>
-                    <h3 class="font-bold text-white mb-2">Location</h3>
-                    <p class="text-gray-300 text-sm">Mumbai, India</p>
-                </div>
-
-                <a href="https://www.linkedin.com/in/vikasds007/" target="_blank" class="card-interactive card-blue group">
-                    <div class="w-12 h-12 bg-neon-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-blue/30 transition-all">
-                        <span class="text-neon-blue text-xl">💼</span>
-                    </div>
-                    <h3 class="font-bold text-white mb-2 group-hover:text-neon-blue transition-colors">LinkedIn</h3>
-                    <p class="text-gray-300 text-sm">Connect</p>
+                    <p class="text-gray-300 text-sm mt-auto">Connect</p>
                 </a>
 
-                <a href="https://github.com/VikasDs007?tab=repositories" target="_blank" class="card-interactive card-green group">
-                    <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-green/30 transition-all">
-                        <span class="text-neon-green text-xl">💻</span>
+                <a href="https://github.com/VikasDs007?tab=repositories" target="_blank" class="card-interactive card-green group h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-neon-green/30 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-neon-green" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-white mb-2 group-hover:text-neon-green transition-colors">GitHub</h3>
                     </div>
-                    <h3 class="font-bold text-white mb-2 group-hover:text-neon-green transition-colors">GitHub</h3>
-                    <p class="text-gray-300 text-sm">View Code</p>
+                    <p class="text-gray-300 text-sm mt-auto">View Code</p>
                 </a>
             </div>
 
@@ -1742,7 +2054,7 @@
                 <button onclick="toggleContactForm()" class="btn-primary">
                     Share an Opportunity
                 </button>
-                <a href="assets/docs/Vikas_Chaurasia_Data_Analyst.pdf" download class="btn-secondary">
+                <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download class="btn-secondary">
                     Download Resume
                 </a>
             </div>
@@ -1790,12 +2102,12 @@
                             <select name="project_type" required
                                 class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors">
                                 <option value="">Select opportunity type</option>
-                                <option value="full-time">Full-time Data Analyst Role</option>
-                                <option value="internship">Internship / Trainee Role</option>
-                                <option value="contract">Contract / Freelance Analytics</option>
-                                <option value="referral">Referral / Hiring Discussion</option>
-                                <option value="collaboration">Project Collaboration</option>
-                                <option value="other">Other</option>
+                                <option value="full-time">AI/ML Engineer Role</option>
+                                <option value="internship">GenAI / LLM Developer Role</option>
+                                <option value="contract">Data Scientist Role</option>
+                                <option value="referral">Contract / Freelance AI Project</option>
+                                <option value="collaboration">Research Collaboration</option>
+                                <option value="other">Referral / Hiring Discussion</option>
                             </select>
                         </div>
 
@@ -1838,7 +2150,7 @@
                         <div>
                             <label class="block text-sm font-semibold text-gray-300 mb-2">Skill Match Details</label>
                             <textarea name="data_details" rows="3"
-                                placeholder="Mention preferred tools (SQL, Power BI, Python, Excel), domain, and location mode (WFO/Hybrid/Remote)..."
+                                placeholder="Mention preferred tools (Python, PyTorch, LangChain, FastAPI, Docker), vector databases, cloud platforms, and location mode..."
                                 class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon-blue focus:outline-none transition-colors resize-vertical"></textarea>
                         </div>
 
@@ -1860,7 +2172,7 @@
     <footer class="py-8 px-6 border-t border-gray-800">
         <div class="max-w-6xl mx-auto text-center">
             <div class="font-mono text-neon-blue mb-4">&lt;/vikas.dev&gt;</div>
-            <p class="text-gray-400 text-sm">© 2026 Vikas Chaurasia. Crafted with analytics and code.</p>
+            <p class="text-gray-400 text-sm">© 2026 Vikas Chaurasia. Built with Python, curiosity, and a bias for deployment.</p>
         </div>
     </footer>
 
@@ -1903,11 +2215,13 @@
             }
         });
 
-        // Optimized Particle.js Configuration
+        // Optimized Particle.js Configuration with Advanced Interactivity
         function initParticles() {
+            if (typeof particlesJS === 'undefined') return;
+            
             // Reduce particles on mobile for better performance
             const isMobile = window.innerWidth < 768;
-            const particleCount = isMobile ? 40 : 80;
+            const particleCount = isMobile ? 35 : 65;
             
             particlesJS('particles-js', {
                 particles: {
@@ -1922,51 +2236,51 @@
                         value: ['#00D4FF', '#8B5CF6', '#00FF88']
                     },
                     shape: {
-                        type: 'circle',
+                        type: ['circle', 'triangle'],
                         stroke: {
                             width: 0,
                             color: '#000000'
                         }
                     },
                     opacity: {
-                        value: 0.5,
-                        random: false,
+                        value: 0.4,
+                        random: true,
                         anim: {
-                            enable: false,
+                            enable: true,
                             speed: 1,
                             opacity_min: 0.1,
                             sync: false
                         }
                     },
                     size: {
-                        value: 3,
+                        value: isMobile ? 3 : 4,
                         random: true,
                         anim: {
-                            enable: false,
-                            speed: 40,
-                            size_min: 0.1,
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.5,
                             sync: false
                         }
                     },
                     line_linked: {
                         enable: true,
-                        distance: 150,
+                        distance: 120,
                         color: '#00D4FF',
-                        opacity: 0.4,
+                        opacity: 0.15,
                         width: 1
                     },
                     move: {
                         enable: true,
-                        speed: 2,
+                        speed: 1.5,
                         direction: 'none',
-                        random: false,
+                        random: true,
                         straight: false,
                         out_mode: 'out',
                         bounce: false,
                         attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200
+                            enable: true,
+                            rotateX: 800,
+                            rotateY: 1600
                         }
                     }
                 },
@@ -1974,35 +2288,35 @@
                     detect_on: 'canvas',
                     events: {
                         onhover: {
-                            enable: true,
-                            mode: 'repulse'
+                            enable: !isMobile,
+                            mode: 'bubble'
                         },
                         onclick: {
                             enable: true,
-                            mode: 'push'
+                            mode: 'repulse'
                         },
                         resize: true
                     },
                     modes: {
                         grab: {
-                            distance: 400,
+                            distance: 300,
                             line_linked: {
-                                opacity: 1
+                                opacity: 0.8
                             }
                         },
                         bubble: {
-                            distance: 400,
-                            size: 40,
+                            distance: 250,
+                            size: 8,
                             duration: 2,
-                            opacity: 8,
+                            opacity: 0.8,
                             speed: 3
                         },
                         repulse: {
-                            distance: 200,
+                            distance: 150,
                             duration: 0.4
                         },
                         push: {
-                            particles_nb: 4
+                            particles_nb: 3
                         },
                         remove: {
                             particles_nb: 2
@@ -2082,7 +2396,7 @@
         }
         
         function fallbackToMailto(data) {
-            const subject = encodeURIComponent("Data Analyst Opportunity from " + data.from_name);
+            const subject = encodeURIComponent("AI/ML & GenAI Opportunity from " + data.from_name);
             const body = encodeURIComponent(`
 New Opportunity Inquiry:
 
@@ -2106,6 +2420,49 @@ ${data.data_details}
             toggleContactForm();
         }
         
+        // Live ML Cost Predictor Inference Logic
+        function runInsuranceInference() {
+            const age = parseInt(document.getElementById('inpAge').value);
+            const bmi = parseFloat(document.getElementById('inpBmi').value);
+            const children = parseInt(document.getElementById('inpChildren').value);
+            const region = document.getElementById('inpRegion').value;
+            const smoker = document.getElementById('inpSmoker').checked;
+
+            document.getElementById('valAge').textContent = age;
+            document.getElementById('valBmi').textContent = bmi.toFixed(1);
+
+            // Calibrated linear regression coefficients from medical cost dataset
+            let chargesUSD = -11820.0 + (age * 257.2) + (bmi * 322.6) + (children * 475.4);
+            if (smoker) {
+                chargesUSD += 23820.0;
+            }
+            if (region === 'southeast') {
+                chargesUSD += 1030.0;
+            } else if (region === 'southwest') {
+                chargesUSD += 350.0;
+            } else if (region === 'northeast') {
+                chargesUSD += 960.0;
+            }
+            
+            // Clamp minimum charge
+            chargesUSD = Math.max(1000, chargesUSD);
+            
+            // Convert to INR (approx 1 USD = 83 INR)
+            const chargesINR = chargesUSD * 83.0;
+
+            // Format output
+            const formatted = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(chargesINR);
+            document.getElementById('predictedCharges').textContent = formatted;
+        }
+        
+        function toggleInferenceWidget() {
+            const widget = document.getElementById('inferenceWidget');
+            widget.classList.toggle('hidden');
+            if (!widget.classList.contains('hidden')) {
+                runInsuranceInference();
+            }
+        }
+        
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 ${
@@ -2122,6 +2479,38 @@ ${data.data_details}
                     document.body.removeChild(notification);
                 }, 300);
             }, 5000);
+        }
+
+        // Particle System Control Handler
+        let particlesActive = true;
+        
+        function toggleParticles() {
+            particlesActive = !particlesActive;
+            const canvasContainer = document.getElementById('particles-js');
+            const pjs = window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS;
+            
+            const btnD = document.getElementById('particleToggleTxt');
+            const btnM = document.getElementById('particleToggleTxtMobile');
+            
+            if (particlesActive) {
+                if (canvasContainer) canvasContainer.style.opacity = '1';
+                if (pjs) {
+                    pjs.particles.move.enable = true;
+                    pjs.fn.vendors.draw();
+                }
+                if (btnD) btnD.textContent = "Particles On";
+                if (btnM) btnM.textContent = "Particles On";
+                showNotification("Particles enabled.", "success");
+            } else {
+                if (canvasContainer) canvasContainer.style.opacity = '0';
+                if (pjs) {
+                    pjs.particles.move.enable = false;
+                    cancelAnimationFrame(pjs.fn.drawAnimFrame);
+                }
+                if (btnD) btnD.textContent = "Particles Off";
+                if (btnM) btnM.textContent = "Particles Off";
+                showNotification("Particles disabled (battery saver active).", "info");
+            }
         }
 
         // Enhanced Analytics Skills Animation
@@ -2315,7 +2704,7 @@ ${data.data_details}
             // Track resume downloads
             document.querySelectorAll('a[download]').forEach(link => {
                 link.addEventListener('click', () => {
-                    trackEvent('download', 'resume', 'vikas_chaurasia_data_analyst.pdf');
+                    trackEvent('download', 'resume', 'vikas_chaurasia_ai_ml_engineer.pdf');
                 });
             });
         }
@@ -2337,19 +2726,24 @@ ${data.data_details}
                 }
             });
             
-            // Initialize new features
+            // Initialize layout features
             initBackToTop();
             initNavbarState();
             initLoadingAnimations();
             initAnalyticsTracking();
             
-            // Performance optimized initialization
+            // Performance optimized particle system initialization
             initParticles();
             
-            // Delay heavy operations for better initial load
+            // Delay heavier UI operations for better initial load time and fluid UX
             setTimeout(() => {
                 animateSkillBadges();
                 animateDataScienceStats();
+                initScrollAnimations();
+                initProjectInteractions();
+                initMagneticButtons();
+                animateCodeTerminal();
+                enhancedTypingEffect();
             }, 500);
             
             // Update form handler
@@ -2518,77 +2912,172 @@ ${data.data_details}
             });
         }
 
-        // Enhanced Particle System
-        function initAdvancedParticles() {
-            if (window.particlesJS) {
-                particlesJS('particles-js', {
-                    particles: {
-                        number: { value: 60, density: { enable: true, value_area: 1000 } },
-                        color: { value: ['#00D4FF', '#8B5CF6', '#00FF88'] },
-                        shape: { 
-                            type: ['circle', 'triangle'],
-                            stroke: { width: 0, color: '#000000' }
-                        },
-                        opacity: { 
-                            value: 0.4, 
-                            random: true,
-                            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
-                        },
-                        size: { 
-                            value: 4, 
-                            random: true,
-                            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
-                        },
-                        line_linked: {
-                            enable: true,
-                            distance: 120,
-                            color: '#00D4FF',
-                            opacity: 0.15,
-                            width: 1
-                        },
-                        move: {
-                            enable: true,
-                            speed: 1.5,
-                            direction: 'none',
-                            random: true,
-                            straight: false,
-                            out_mode: 'out',
-                            bounce: false,
-                            attract: { enable: true, rotateX: 800, rotateY: 1600 }
-                        }
-                    },
-                    interactivity: {
-                        detect_on: 'canvas',
-                        events: {
-                            onhover: { enable: true, mode: 'bubble' },
-                            onclick: { enable: true, mode: 'repulse' },
-                            resize: true
-                        },
-                        modes: {
-                            grab: { distance: 300, line_linked: { opacity: 0.8 } },
-                            bubble: { distance: 250, size: 8, duration: 2, opacity: 0.8, speed: 3 },
-                            repulse: { distance: 150, duration: 0.4 },
-                            push: { particles_nb: 3 },
-                            remove: { particles_nb: 2 }
-                        }
-                    },
-                    retina_detect: true
-                });
+        // Chatbot Widget State & Handlers
+        let isChatbotInitialized = false;
+
+        function toggleChatbot() {
+            const chatContainer = document.getElementById('chatContainer');
+            chatContainer.classList.toggle('open');
+            if (chatContainer.classList.contains('open') && !isChatbotInitialized) {
+                isChatbotInitialized = true;
             }
         }
 
-        // Initialize all advanced features
-        document.addEventListener('DOMContentLoaded', function() {
+        function handleChipClick(queryText) {
+            document.getElementById('chatInput').value = queryText;
+            sendChatMessage();
+        }
+
+        function handleChatKeyDown(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function sendChatMessage() {
+            const inputEl = document.getElementById('chatInput');
+            const userText = inputEl.value.trim();
+            if (!userText) return;
+
+            // Clear input
+            inputEl.value = '';
+
+            // Render user message
+            renderChatMessage(userText, 'user');
+
+            // Render typing indicator
+            renderTypingIndicator(true);
+
+            // Simulate agent delay
             setTimeout(() => {
-                initScrollAnimations();
-                initProjectInteractions();
-                initMagneticButtons();
-                animateCodeTerminal();
-                enhancedTypingEffect();
-                initAdvancedParticles();
-            }, 500);
-        });
+                renderTypingIndicator(false);
+                const replyText = getAgentReply(userText);
+                renderChatMessage(replyText, 'agent');
+            }, 1000);
+        }
+
+        function renderChatMessage(text, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const msgEl = document.createElement('div');
+            msgEl.className = `chat-msg ${sender}`;
+            msgEl.innerHTML = text.replace(/\n/g, '<br>');
+            chatMessages.appendChild(msgEl);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function renderTypingIndicator(show) {
+            const chatMessages = document.getElementById('chatMessages');
+            const existingIndicator = document.getElementById('typingIndicator');
+            
+            if (show && !existingIndicator) {
+                const indicatorEl = document.createElement('div');
+                indicatorEl.id = 'typingIndicator';
+                indicatorEl.className = 'chat-msg agent flex items-center justify-start';
+                indicatorEl.innerHTML = `
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                `;
+                chatMessages.appendChild(indicatorEl);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            } else if (!show && existingIndicator) {
+                existingIndicator.remove();
+            }
+        }
+
+        function getAgentReply(userText) {
+            const text = userText.toLowerCase();
+
+            if (text.includes('project') || text.includes('portfoli') || text.includes('insurance') || text.includes('sentiment')) {
+                return `Vikas has built some awesome AI/ML projects:
+1. **AI Medical Insurance Predictor:** Deployed MLOps regression pipeline (R² = 0.884) predicting premiums.
+2. **AI Financial News Analyzer:** LangChain-orchestrated Llama 3 sentiment agent tracking 5 market sectors.
+3. **E-Commerce & Churn Analytics:** Production dashboards and ETL workflows.
+*You can view their repository details in the **Projects** section above!*`;
+            }
+            
+            if (text.includes('skill') || text.includes('stack') || text.includes('tool') || text.includes('python') || text.includes('langchain')) {
+                return `Vikas's core stack includes:
+• **GenAI & LLMs:** LangChain, LangGraph, Llama 3, Groq, Ollama, Hugging Face
+• **Machine Learning / APIs:** Scikit-learn, FastAPI, Docker, PyTorch
+• **Data Tools:** SQL, Postgres, Pandas, Vector DBs, Power BI, Excel`;
+            }
+
+            if (text.includes('experience') || text.includes('work') || text.includes('job') || text.includes('blubrick')) {
+                return `Vikas has **1.3+ years** of operations and data analyst experience. At **BluBrick Realty**, he built custom Power BI and ETL reporting workflows that boosted reporting speed/efficiency by **30%**. He is now specializing in deploying production-ready AI systems.`;
+            }
+
+            if (text.includes('relocat') || text.includes('location') || text.includes('mumbai') || text.includes('remote') || text.includes('where')) {
+                return `Vikas is based in **Mumbai, India** and is open to hybrid/onsite roles in Mumbai, Navi Mumbai, and Thane. He is also open to full-time **remote** opportunities worldwide!`;
+            }
+
+            if (text.includes('education') || text.includes('college') || text.includes('msc') || text.includes('degree')) {
+                return `Vikas holds an **M.Sc. in Data Science & Business Analytics** (Graduated 2025) and a Bachelor of Commerce (2021). This gives him a unique blend of core business analytical thinking and advanced technical ML engineering skills.`;
+            }
+
+            if (text.includes('contact') || text.includes('email') || text.includes('reach') || text.includes('hire')) {
+                return `You can connect with Vikas via:
+📧 **Email:** vikasjchaurasia@gmail.com
+💼 **LinkedIn:** linkedin.com/in/vikasds007
+💻 **GitHub:** github.com/VikasDs007
+Or use the **"Share an Opportunity"** contact form modal on the main page to send an instant inquiry!`;
+            }
+
+            // Fallback response
+            return `I'm Vikas's client-side assistant. Ask me about his **skills**, **projects**, **experience**, **education**, or **location**. 
+            
+*You can also type "contact" to get his contact info!*`;
+        }
+
     </script>
+
+    <!-- Resume AI Chatbot Widget -->
+    <div class="chatbot-btn shadow-lg" onclick="toggleChatbot()" id="chatbotBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+    </div>
+
+    <div class="chat-container font-sans" id="chatContainer">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="flex items-center gap-2">
+                <span class="text-neon-blue text-lg">🤖</span>
+                <div class="text-left">
+                    <h4 class="font-bold text-white text-xs md:text-sm font-mono leading-tight">Vikas AI Agent</h4>
+                    <span class="text-[10px] text-neon-green font-mono">● Online</span>
+                </div>
+            </div>
+            <button onclick="toggleChatbot()" class="text-gray-400 hover:text-neon-blue text-xl transition-colors font-bold">&times;</button>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-messages text-left" id="chatMessages">
+            <div class="chat-msg agent">
+                Hi! I'm Vikas's AI Assistant. Ask me anything about his experience, projects, or background, or choose a prompt below!
+            </div>
+        </div>
+
+        <!-- Suggestion Chips -->
+        <div class="chat-chips-container text-left" id="chatChips">
+            <div class="chat-chip" onclick="handleChipClick('Show projects')">📂 Projects</div>
+            <div class="chat-chip" onclick="handleChipClick('What is your tech stack?')">🛠️ Skills Stack</div>
+            <div class="chat-chip" onclick="handleChipClick('What is your experience?')">💼 Experience</div>
+            <div class="chat-chip" onclick="handleChipClick('Open to relocation?')">📍 Location</div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Ask about Vikas..." class="chat-input" onkeydown="handleChatKeyDown(event)">
+            <div class="chat-send-btn" onclick="sendChatMessage()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-none stroke-black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
