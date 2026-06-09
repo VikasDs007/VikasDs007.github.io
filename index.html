@@ -1183,9 +1183,9 @@
                         <span>✨</span>
                         <span id="particleToggleTxt">Particles On</span>
                     </button>
-                    <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download
+                    <a href="mailto:vikasjchaurasia@gmail.com?subject=Resume Request - Vikas Chaurasia"
                         class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-neon-blue/25 transition-all border border-neon-blue/30">
-                        Resume
+                        Request Resume
                     </a>
                 </div>
                 
@@ -1215,9 +1215,9 @@
                             <span>✨</span>
                             <span id="particleToggleTxtMobile">Particles On</span>
                         </button>
-                        <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download
+                        <a href="mailto:vikasjchaurasia@gmail.com?subject=Resume Request - Vikas Chaurasia"
                             class="bg-gradient-to-r from-neon-blue to-neon-purple px-4 py-2 rounded-lg text-white font-semibold text-center border border-neon-blue/30">
-                            Resume
+                            Request Resume
                         </a>
                     </div>
                 </div>
@@ -2054,8 +2054,8 @@ Building end-to-end AI systems —
                 <button onclick="toggleContactForm()" class="btn-primary">
                     Share an Opportunity
                 </button>
-                <a href="assets/docs/Vikas_Chaurasia_AI_ML_Engineer.pdf" download class="btn-secondary">
-                    Download Resume
+                <a href="mailto:vikasjchaurasia@gmail.com?subject=Resume Request - Vikas Chaurasia" class="btn-secondary">
+                    Request Resume
                 </a>
             </div>
             <p class="text-sm text-gray-400 mt-4 font-mono">Typical response time: within 24 hours</p>
@@ -2701,10 +2701,10 @@ ${data.data_details}
                 });
             });
 
-            // Track resume downloads
-            document.querySelectorAll('a[download]').forEach(link => {
+            // Track resume requests
+            document.querySelectorAll('a[href*="subject=Resume Request"]').forEach(link => {
                 link.addEventListener('click', () => {
-                    trackEvent('download', 'resume', 'vikas_chaurasia_ai_ml_engineer.pdf');
+                    trackEvent('click', 'resume_request', 'mailto');
                 });
             });
         }

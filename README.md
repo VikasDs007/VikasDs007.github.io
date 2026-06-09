@@ -148,7 +148,7 @@ VikasDs007.github.io/
 │   │       ├── Churn Analysis Dashboard.png
 │   │       └── Nykaa_Marketing_Campaign_dashboard_1.png
 │   └── docs/
-│       ├── Vikas_Chaurasia_Data_Analyst.pdf (Resume)
+│       ├── Vikas_Chaurasia_AI_ML_Engineer.pdf (Resume)
 │       ├── Profile.pdf (LinkedIn Export)
 │       └── LINKEDIN_RESUME_COPY.md
 ├── .github/
@@ -168,13 +168,16 @@ VikasDs007.github.io/
 - EmailJS integration for contact form
 
 **Key Features:**
-- ✨ Smooth animations & interactive elements
+- 🤖 **Interactive "Ask My Resume" AI Chatbot:** Client-side agent router answering candidate background and project inquiries.
+- 🧮 **Live "ML Insurance Predictor" Widget:** Interactive slider cost calculator using linear regression model weights.
+- 🔋 **Performance Particle Toggle:** Pauses canvas loops to save CPU/GPU and battery life.
+- ✨ Smooth animations & interactive layout
 - 📱 Fully responsive (mobile, tablet, desktop)
 - 🌙 Modern dark theme with neon accents
-- 📊 Live dashboard image previews
+- 📊 Live project dashboard image previews
 - 🔗 Social media & GitHub integration
 - 📈 Google Analytics integration
-- ⚡ Optimized performance
+- ⚡ Optimized performance & battery saver modes
 
 ---
 
@@ -183,7 +186,7 @@ VikasDs007.github.io/
 - **Portfolio:** [vikasds007.github.io](https://vikasds007.github.io)
 - **LinkedIn:** [linkedin.com/in/vikasds007](https://www.linkedin.com/in/vikasds007/)
 - **GitHub:** [github.com/VikasDs007](https://github.com/VikasDs007)
-- **Email:** [Download Resume](https://vikasds007.github.io/assets/docs/Vikas_Chaurasia_Data_Analyst.pdf)
+- **Resume:** Request via [Email](mailto:vikasjchaurasia@gmail.com?subject=Resume Request - Vikas Chaurasia) or the live contact form.
 
 ---
 
@@ -235,7 +238,7 @@ This portfolio demonstrates:
 
 ## 📄 Resume & Profile
 
-- **Resume:** [Download PDF](https://vikasds007.github.io/assets/docs/Vikas_Chaurasia_Data_Analyst.pdf)
+- **Resume:** Request via [Email](mailto:vikasjchaurasia@gmail.com?subject=Resume Request - Vikas Chaurasia) or the live contact form.
 - **LinkedIn Profile:** [Full Profile](https://www.linkedin.com/in/vikasds007/)
 
 ---
